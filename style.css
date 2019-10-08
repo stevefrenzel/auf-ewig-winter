@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed&display=swap');
+
+*, *::after, *::before { 
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: #ec1e2e;
+}
+
+#logo {
+    width: 500px;
+    fill: black;
+    padding-top: 20px;
+}
+
+nav {
+    text-align: center;
+}
+
+span {
+    font-size: 3rem;
+    padding: 0 20px 0 20px;
+}
+
+/* FOOTER */
+
+.fab {
+    font-size: 5rem;
+    padding-bottom: 70px;
+}
+
+.fa-facebook-f,
+.fa-twitter {
+    padding-right: 70px;
+}
+
+/* MEDIA QUERIES */
+
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {
+        background: white;
+    }
+    #logo {
+        width: 200px;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    span {
+        font-size: 2rem;
+    }
+    .fab {
+        font-size: 2.5rem;
+        padding-bottom: 20px;
+    }
+    .fa-facebook-f,
+    .fa-twitter {
+        padding-right: 35px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body {
+        background: green;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body {
+        background: blue;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body {
+        background: orange;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    body {
+        background: yellow;
+    }
+} 
