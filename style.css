@@ -112,6 +112,47 @@ footer {
 .fa-bandcamp:hover {
     cursor: not-allowed;
 }
+/* ///// */
+/* MISC */
+/* /// */
+
+.blur {
+    filter: blur(5px);
+}
+
+.outer-modal,
+.inner-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.outer-modal {
+    background: rgba(236, 30, 46, 0.5);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.inner-modal {
+    opacity: unset;
+    width: 90vw;
+    height: 90vh;
+    color: white;
+    text-align: justify;
+    overflow: scroll;
+}
+
+.high-z-index {
+    z-index: 666;
+}
+
+.low-z-index {
+    z-index: -666;
+}
 
 /* ////////////// */
 /* MEDIA QUERIES */
