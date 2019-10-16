@@ -13,10 +13,22 @@ body {
 }
 
 .grid-container {
+    z-index: 2;
     display: grid;
     grid-template: repeat(12, auto) / repeat(12, auto);
     width: 100vw;
     height: 100vh;
+}
+
+/* VIDEO */
+
+#video {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 /* LOGO */
@@ -47,6 +59,7 @@ nav {
 #shop-link,
 #podcast-link {
     text-decoration: line-through;
+    filter: grayscale(100%);
 }
 
 #shop-link:hover,
@@ -80,8 +93,17 @@ footer {
     font-size: 5rem;
 }
 
-.fab:hover {
+.fa-facebook-f:hover,
+.fa-twitter:hover {
     color: white;
+}
+
+.fa-bandcamp {
+    filter: grayscale(100%);
+}
+
+.fa-bandcamp:hover {
+    cursor: not-allowed;
 }
 
 /* ////////////// */
