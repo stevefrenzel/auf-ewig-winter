@@ -204,10 +204,6 @@ footer {
  /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-    body {
-        background: white;
-    }
-
     #auf-ewig-winter-logo {
         width: 175px;
     }
@@ -266,9 +262,6 @@ footer {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    body {
-        background: green;
-    }
 
     #haxan-logo {
         margin-right: 0;
@@ -282,9 +275,6 @@ footer {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    body {
-        background: blue;
-    }
 
     #haxan-logo {
         margin-right: 100px;
@@ -310,9 +300,6 @@ footer {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    body {
-        background: orange;
-    }
 
     #haxan-logo {
         margin-right: 100px;
@@ -335,10 +322,3 @@ footer {
         height: 320px;
     }
 }
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    body {
-        background: yellow;
-    }
-} 
