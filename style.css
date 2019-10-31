@@ -33,10 +33,10 @@ body {
 }
 
 /* ///// */
-/* LOGO */
+/* LOGOS */
 /* /// */
 
-figure {
+#main-figure {
     grid-row: 3 / 5;
     grid-column: 3 / 11;
     margin: 0;
@@ -45,8 +45,36 @@ figure {
     align-items: center;
 }
 
-#logo {
+#auf-ewig-winter-logo {
     width: 500px;
+    fill: #ec1e2e;
+}
+
+#haxan-logo,
+#kora-winter-logo {
+    fill: white;
+    transition: all 0.2s ease-out;
+}
+
+#haxan-logo {
+    width: 500px;
+    height: 300px;
+    margin-right: 100px;
+}
+
+#haxan-logo:hover {
+    width: 520px;
+    height: 320px;
+}
+
+#kora-winter-logo {
+    width: 300px;
+    height: 300px;
+}
+
+#kora-winter-logo:hover {
+    width: 320px;
+    height: 320px;
 }
 
 /* /////////// */
@@ -112,6 +140,47 @@ footer {
 .fa-bandcamp:hover {
     cursor: not-allowed;
 }
+/* /////// */
+/* MODALS */
+/* ///// */
+
+.outer-modal,
+.inner-modal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.outer-modal {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-modal {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#legal-notice-modal {
+    overflow: scroll;
+}
+
+.legal-notice-inner-modal {
+    font-size: 1.5rem;
+    color: white;
+    padding: 10%;
+    text-align: justify;
+}
+
+
 /* ///// */
 /* MISC */
 /* /// */
@@ -120,38 +189,12 @@ footer {
     filter: blur(5px);
 }
 
-.outer-modal,
-.inner-modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.hidden {
+    display: none;
 }
 
-.outer-modal {
-    background: rgba(236, 30, 46, 0.5);
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-
-.inner-modal {
-    opacity: unset;
-    width: 90vw;
-    height: 90vh;
-    color: white;
-    text-align: justify;
-    overflow: scroll;
-}
-
-.high-z-index {
+.z-index {
     z-index: 666;
-}
-
-.low-z-index {
-    z-index: -666;
 }
 
 /* ////////////// */
@@ -161,12 +204,33 @@ footer {
  /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-    /* body {
+    body {
         background: white;
-    } */
+    }
 
-    #logo {
+    #auf-ewig-winter-logo {
         width: 175px;
+    }
+
+    #haxan-logo {
+        margin-right: 0;
+        width: 250px;
+        height: 150px;
+    }
+
+    #kora-winter-logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    #haxan-logo:hover {
+        width: 270px;
+        height: 170px;
+    }
+
+    #kora-winter-logo:hover {
+        width: 220px;
+        height: 220px;
     }
 
     nav {
@@ -188,32 +252,93 @@ footer {
         font-size: 3rem;
     }
 
+    .inner-modal {
+        flex-direction: column;
+    }
+
+    .legal-notice-inner-modal {
+        font-size: 1rem;
+        padding: 5%;
+    flex-direction: unset;
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    /* body {
+    body {
         background: green;
-    } */
+    }
+
+    #haxan-logo {
+        margin-right: 0;
+    }
+
+    .legal-notice-inner-modal {
+        font-size: 1.2rem;
+        padding: 5%;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    /* body {
+    body {
         background: blue;
-    } */
+    }
+
+    #haxan-logo {
+        margin-right: 100px;
+        width: 400px;
+        height: 200px;
+    }
+
+    #kora-winter-logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    #haxan-logo:hover {
+        width: 420px;
+        height: 220px;
+    }
+
+    #kora-winter-logo:hover {
+        width: 220px;
+        height: 220px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    /* body {
+    body {
         background: orange;
-    } */
+    }
+
+    #haxan-logo {
+        margin-right: 100px;
+        width: 500px;
+        height: 300px;
+    }
+
+    #kora-winter-logo {
+        width: 300px;
+        height: 300px;
+    }
+
+    #haxan-logo:hover {
+        width: 520px;
+        height: 320px;
+    }
+
+    #kora-winter-logo:hover {
+        width: 320px;
+        height: 320px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    /* body {
+    body {
         background: yellow;
-    } */
+    }
 } 
