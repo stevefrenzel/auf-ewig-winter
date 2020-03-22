@@ -1,24 +1,23 @@
-# auf-ewig-winter
+# Website for german record label AUF EWIG WINTER
 
-## Project setup
-```
-npm install
-```
+###### Built with [Vue.js](https://vuejs.org/) and [Bootstrap](https://getbootstrap.com/).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## TO DO:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Install Vue Fontawesome
 
-### Lints and fixes files
-```
-npm run lint
-```
+- Add video background
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Pass data object, don't hardcode
+
+- Fix Footer
+
+- Use _Fira Sans Extra Condensed_ as font
+
+- Write proper documentation
+
+- Use semantic markup
+
+- SEO
+
+- Add transitions and / or animations
