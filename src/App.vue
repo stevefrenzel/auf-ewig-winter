@@ -54,9 +54,11 @@
   }
   .column-red {
     background-color: lightcoral;
+    border: 1px solid black;
   }
   .column-green {
     background-color: lightgreen;
+    border: 1px solid black;
   }
   .footer {
     position: absolute;
