@@ -1,10 +1,24 @@
 # auf-ewig-winter
-Website for german record label AUF EWIG WINTER.
 
-## To Do
+## Project setup
+```
+npm install
+```
 
-1. Include favicon.ico
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-2. Make artist link a dropdown menu
+### Compiles and minifies for production
+```
+npm run build
+```
 
-3. Add legal notice text
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
