@@ -4,15 +4,15 @@
 
 ## TO DO:
 
-- Install Vue Fontawesome
+- Install Vue Fontawesome √
 
 - Add video background
 
-- Pass data object, don't hardcode
+- Pass data object, don't hardcode √
 
 - Fix Footer
 
-- Use _Fira Sans Extra Condensed_ as font
+- Use _Fira Sans Extra Condensed_ as font √
 
 - Write proper documentation
 
