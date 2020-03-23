@@ -5,7 +5,6 @@
     </video>
     <b-container fluid id="main-container">
       <!-- LOGO -->
-      <!-- Possible to set breakpoint for width with a class name? -->
       <b-row class="text-center" align-h="center">
         <b-col class="my-5" xs="12" md="8">
           <figure class="m-0">
@@ -18,7 +17,10 @@
       <nav>
         <b-row class="text-center" align-h="center" align-v="center">
           <b-col v-for="item in navigation" :key="item.title" sm="auto"
-            ><a :href="item.link" rel="noopener noreferrer"
+            ><a
+              :href="item.link"
+              rel="noopener noreferrer"
+              class="text-decoration-none"
               ><h2 class="m-0 px-3 nav-item">{{ item.title }}</h2></a
             ></b-col
           >
@@ -26,11 +28,15 @@
       </nav>
 
       <!-- SOCIAL MEDIA -->
-      <!-- Possible to set breakpoint for size with a class name? -->
       <section>
-        <b-row class="mt-5 text-center" align-h="center">
-          <b-col v-for="item in socialMedia" :key="item.title" cols="2"
-            ><h3 class="m-0">
+        <b-row class="my-5" align-h="center">
+          <b-col
+            v-for="item in socialMedia"
+            :key="item.title"
+            cols="3"
+            lg="2"
+            class="text-center"
+            ><h3 class="m-0 ">
               <a :href="item.link" rel="noopener noreferrer">
                 <font-awesome-icon
                   class="icon"
@@ -40,14 +46,6 @@
           ></b-col>
         </b-row>
       </section>
-
-      <!-- FOOTER -->
-      <!-- How to make this footer stick to bottom? -->
-      <!-- <footer class="footer text-center">
-        <b-row>
-          <b-col>Coded with ♥️ by Steve Frenzel.</b-col>
-        </b-row>
-      </footer> -->
     </b-container>
   </div>
 </template>
@@ -83,12 +81,13 @@
 <style>
   @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed&display=swap');
 
-  /* GENERAL: */
   #app {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     height: 100vh;
     overflow: scroll;
-    background-color: lightblue;
+    background-color: #000;
+    display: flex;
+    align-items: center;
   }
   #video {
     position: fixed;
@@ -101,38 +100,32 @@
   .icon {
     color: #e8402a;
   }
-  .column-red {
+  .icon:hover,
+  .nav-item:hover {
+    color: #fff;
+  }
+  /* .column-red {
     background-color: lightcoral;
     border: 1px solid black;
   }
   .column-green {
     background-color: lightgreen;
     border: 1px solid black;
-  }
-  /* NAVIGATION: */
-
-  /* SOCIAL MEDIA: */
-
-  /* FOOTER: */
-  .footer {
-    background-color: lightcoral;
-  }
+  } */
 
   /* MEDIA QUERIES: */
+  /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
     img {
       width: 75%;
     }
     .icon {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    img {
-      width: 50%;
-    }
-  }
-  @media only screen and (min-width: 768px) {
     img {
       width: 50%;
     }
