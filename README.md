@@ -21,3 +21,5 @@
 - SEO
 
 - Add transitions and / or animations
+
+- Add fav icon
