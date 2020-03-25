@@ -16,19 +16,25 @@
 <script>
   // TO DO:
   // How to pass up item.title to parent to open respective modal?
+
   export default {
     name: 'Navigation',
     data() {
       return {
         navigation: [
-          { title: 'ARTISTS', link: null },
-          { title: 'SHOP', link: 'https://aufewigwinter.bandcamp.com/merch/' },
+          { id: 'artists', title: 'ARTISTS', link: null },
           {
+            id: 'shop',
+            title: 'SHOP',
+            link: 'https://aufewigwinter.bandcamp.com/merch/'
+          },
+          {
+            id: 'podcast',
             title: 'PODCAST',
             link:
               'https://open.spotify.com/show/6P3GrTJDW22sxod54f1kRs?si=iYtYzeeDTwu84A7A63TAXg'
           },
-          { title: 'LEGAL NOTICE', link: null }
+          { id: 'legalNotice', title: 'LEGAL NOTICE', link: null }
         ]
       };
     }
