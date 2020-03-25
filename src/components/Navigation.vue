@@ -1,18 +1,18 @@
 <template>
-  <transition name="fade">
-    <nav>
-      <b-row class="text-center" align-h="center" align-v="center">
-        <b-col v-for="item in navigation" :key="item.title" sm="auto"
+  <nav>
+    <b-row class="text-center" align-h="center" align-v="center">
+      <b-col v-for="item in navigation" :key="item.title" sm="auto"
+        ><transition name="fade"
           ><a
             :href="item.link"
             rel="noopener noreferrer"
             class="text-decoration-none"
             ><h2 class="m-0 px-3 nav-item">{{ item.title }}</h2></a
-          ></b-col
-        >
-      </b-row>
-    </nav>
-  </transition>
+          >
+        </transition></b-col
+      >
+    </b-row>
+  </nav>
 </template>
 
 <script>

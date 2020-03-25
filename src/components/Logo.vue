@@ -1,13 +1,13 @@
 <template>
-  <transition name="fade">
-    <b-row class="text-center" align-h="center">
-      <b-col class="my-5" xs="12" md="8">
-        <figure class="m-0">
+  <b-row class="text-center" align-h="center">
+    <b-col class="mb-5" xs="12" md="8">
+      <figure class="m-0">
+        <transition name="fade">
           <img fluid src="../assets/logo.png" alt="AUF EWIG WINTER LOGO" />
-        </figure>
-      </b-col>
-    </b-row>
-  </transition>
+        </transition>
+      </figure>
+    </b-col>
+  </b-row>
 </template>
 
 <script>
