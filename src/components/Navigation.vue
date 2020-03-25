@@ -14,6 +14,8 @@
 </template>
 
 <script>
+  // TO DO:
+  // How to pass up item.title to parent to open respective modal?
   export default {
     name: 'Navigation',
     data() {
