@@ -5,20 +5,18 @@
     </video>
     <b-container fluid id="main-container">
       <Logo />
-      <Navigation />
+      <Navigation @show-modal="showModal" />
       <SocialMedia />
       <!-- MODALS -->
-      <ModalArtists />
-      <ModalLegalNotice />
+      <ModalArtists id="modal-artists" />
+      <ModalLegalNotice id="modal-legal-notice" />
     </b-container>
   </div>
 </template>
 
 <script>
   // TO DO:
-  // 1. Proper way to create video background with Bootstrap?
-  // 2. Use Modal to show Artists and Legal Notice
-  // 3. Pass props from Navigation to Modal
+  // How to create event handler that opens respective modal?
 
   import Logo from './components/Logo';
   import Navigation from './components/Navigation';
@@ -34,6 +32,11 @@
       SocialMedia,
       ModalArtists,
       ModalLegalNotice
+    },
+    methods: {
+      showModal(event, value) {
+        console.log('SHOW MODAL', value);
+      }
     }
   };
 </script>
