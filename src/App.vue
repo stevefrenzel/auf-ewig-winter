@@ -5,7 +5,7 @@
     </video>
     <b-container fluid id="main-container">
       <Logo />
-      <Navigation @show-modal="showModal" />
+      <Navigation />
       <SocialMedia />
       <!-- MODALS -->
       <ModalArtists id="modal-artists" />
@@ -32,11 +32,6 @@
       SocialMedia,
       ModalArtists,
       ModalLegalNotice
-    },
-    methods: {
-      showModal(event, value) {
-        console.log('SHOW MODAL', value);
-      }
     }
   };
 </script>
