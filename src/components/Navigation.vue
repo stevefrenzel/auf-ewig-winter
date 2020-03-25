@@ -1,16 +1,18 @@
 <template>
-  <nav>
-    <b-row class="text-center" align-h="center" align-v="center">
-      <b-col v-for="item in navigation" :key="item.title" sm="auto"
-        ><a
-          :href="item.link"
-          rel="noopener noreferrer"
-          class="text-decoration-none"
-          ><h2 class="m-0 px-3 nav-item">{{ item.title }}</h2></a
-        ></b-col
-      >
-    </b-row>
-  </nav>
+  <transition name="fade">
+    <nav>
+      <b-row class="text-center" align-h="center" align-v="center">
+        <b-col v-for="item in navigation" :key="item.title" sm="auto"
+          ><a
+            :href="item.link"
+            rel="noopener noreferrer"
+            class="text-decoration-none"
+            ><h2 class="m-0 px-3 nav-item">{{ item.title }}</h2></a
+          ></b-col
+        >
+      </b-row>
+    </nav>
+  </transition>
 </template>
 
 <script>
@@ -42,6 +44,12 @@
 </script>
 
 <style scoped>
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 5s;
+  }
   .nav-item {
     color: #e8402a;
   }
