@@ -4,6 +4,7 @@
       <b-col v-for="item in navigation" :key="item.title" sm="auto"
         ><transition name="fade"
           ><a
+            @click="showModal(item.id)"
             :href="item.link"
             rel="noopener noreferrer"
             class="text-decoration-none"
@@ -16,9 +17,6 @@
 </template>
 
 <script>
-  // TO DO:
-  // How to pass up item.title to parent to open respective modal?
-
   export default {
     name: 'Navigation',
     data() {
@@ -39,6 +37,16 @@
           { id: 'legalNotice', title: 'LEGAL NOTICE', link: null }
         ]
       };
+    },
+    methods: {
+      showModal(id) {
+        {
+          id === 'artists' ? this.$emit('showArtistModal') : null;
+        }
+        {
+          id === 'legalNotice' ? this.$emit('showLegalNoticeModal') : null;
+        }
+      }
     }
   };
 </script>
@@ -55,5 +63,8 @@
   }
   .nav-item:hover {
     opacity: 0.5;
+  }
+  a:hover {
+    cursor: pointer;
   }
 </style>
