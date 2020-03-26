@@ -5,19 +5,20 @@
     </video>
     <b-container fluid id="main-container">
       <Logo />
-      <Navigation />
+      <Navigation
+        @showArtistModal="showArtistModal"
+        @showLegalNoticeModal="showLegalNoticeModal"
+        @showModal="showModal"
+      />
       <SocialMedia />
       <!-- MODALS -->
-      <ModalArtists id="modal-artists" />
-      <ModalLegalNotice id="modal-legal-notice" />
+      <ModalArtists v-model="artistModal" />
+      <ModalLegalNotice v-model="legalNoticeModal" />
     </b-container>
   </div>
 </template>
 
 <script>
-  // TO DO:
-  // How to create event handler that opens respective modal?
-
   import Logo from './components/Logo';
   import Navigation from './components/Navigation';
   import SocialMedia from './components/SocialMedia';
@@ -32,6 +33,29 @@
       SocialMedia,
       ModalArtists,
       ModalLegalNotice
+    },
+    data() {
+      return {
+        artistModal: false,
+        legalNoticeModal: false
+      };
+    },
+    methods: {
+      showArtistModal() {
+        this.artistModal = true;
+      },
+      showLegalNoticeModal() {
+        this.legalNoticeModal = true;
+      },
+      // This isn't working (yet):
+      showModal() {
+        if (this.artistModal === false) {
+          this.artistModal = true;
+        }
+        if (this.legalNoticeModal === false) {
+          this.legalNoticeModal = true;
+        }
+      }
     }
   };
 </script>
