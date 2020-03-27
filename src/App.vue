@@ -1,17 +1,10 @@
 <template>
   <div id="app">
-    <video autoplay muted loop id="video">
-      <source src="./assets/dust.mp4" type="video/mp4" />
-    </video>
     <b-container fluid id="main-container">
+      <Video />
       <Logo />
-      <Navigation
-        @showArtistModal="showArtistModal"
-        @showLegalNoticeModal="showLegalNoticeModal"
-        @showModal="showModal"
-      />
+      <Navigation @showModal="showModal" />
       <SocialMedia />
-      <!-- MODALS -->
       <ModalArtists v-model="artistModal" />
       <ModalLegalNotice v-model="legalNoticeModal" />
     </b-container>
@@ -19,6 +12,7 @@
 </template>
 
 <script>
+  import Video from './components/Video';
   import Logo from './components/Logo';
   import Navigation from './components/Navigation';
   import SocialMedia from './components/SocialMedia';
@@ -28,6 +22,7 @@
   export default {
     name: 'App',
     components: {
+      Video,
       Logo,
       Navigation,
       SocialMedia,
@@ -41,20 +36,9 @@
       };
     },
     methods: {
-      showArtistModal() {
-        this.artistModal = true;
-      },
-      showLegalNoticeModal() {
-        this.legalNoticeModal = true;
-      },
-      // This isn't working (yet):
-      showModal() {
-        if (this.artistModal === false) {
-          this.artistModal = true;
-        }
-        if (this.legalNoticeModal === false) {
-          this.legalNoticeModal = true;
-        }
+      showModal(id) {
+        this.artistModal = id === 'artists' ? true : false;
+        this.legalNoticeModal = id === 'legalNotice' ? true : false;
       }
     }
   };
@@ -70,12 +54,5 @@
     background-color: #000;
     display: flex;
     align-items: center;
-  }
-  #video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
   }
 </style>
