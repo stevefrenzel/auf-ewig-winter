@@ -41,10 +41,7 @@
     methods: {
       showModal(id) {
         {
-          id === 'artists' ? this.$emit('showArtistModal') : null;
-        }
-        {
-          id === 'legalNotice' ? this.$emit('showLegalNoticeModal') : null;
+          this.$emit('showModal', id);
         }
       }
     }
