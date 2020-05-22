@@ -4,6 +4,7 @@
     <!-- YOUTUBE PLAYER -->
     <iframe
       class="youtube-player"
+      width="560"
       height="315"
       src="https://www.youtube-nocookie.com/embed/uj_-J6dc9Po"
       frameborder="0"
@@ -11,30 +12,34 @@
       allowfullscreen
     ></iframe>
     <!-- BITTER RELEASE -->
-    <h2>"BITTER"</h2>
+    <h2>"BITTER" - 2020</h2>
     <iframe
       class="spotify-player"
       src="https://open.spotify.com/embed/album/0rlhNo56LgYcBrHTvBrE4y"
-      height="330"
       frameborder="0"
       allowtransparency="true"
       allow="encrypted-media"
     ></iframe>
     <button v-on:click="toggle('bitter')">
       {{ showBitterLinks ? 'SHOW LESS' : 'SHOW MORE' }}
+      <font-awesome-icon
+        :icon="['fas', showBitterLinks ? 'caret-up' : 'caret-down']"
+        size="1x"
+        class="button-icon"
+      />
     </button>
     <template v-if="showBitterLinks">
       <div class="link-collection">
         <span v-for="item in linksBitter" :key="item.id" class="media-link">
           <a :href="item.url" rel="noopener">
-            <font-awesome-icon :icon="['fab', item.icon]" size="1x" />
+            <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
             {{ item.title }}</a
           >
         </span>
       </div>
     </template>
     <!-- WELK RELEASE -->
-    <h2>"Welk"</h2>
+    <h2>"Welk" - 2017</h2>
     <iframe
       class="spotify-player"
       src="https://open.spotify.com/embed/album/1aj7iAfh1c1io39LPNi3t1"
@@ -43,21 +48,21 @@
       allowtransparency="true"
       allow="encrypted-media"
     ></iframe>
-    <button v-on:click="toggle('welk')">
+    <!-- <button v-on:click="toggle('welk')">
       {{ showWelkLinks ? 'SHOW LESS' : 'SHOW MORE' }}
-    </button>
-    <template v-if="showWelkLinks">
+    </button> -->
+    <template>
       <div class="link-collection">
         <span v-for="item in linksWelk" :key="item.id" class="media-link">
           <a :href="item.url" rel="noopener">
-            <font-awesome-icon :icon="['fab', item.icon]" size="1x" />
+            <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
             {{ item.title }}</a
           >
         </span>
       </div>
     </template>
     <!-- BLUEHT RELEASE -->
-    <h2>"Blüht"</h2>
+    <h2>"Blüht" - 2015</h2>
     <iframe
       class="spotify-player"
       src="https://open.spotify.com/embed/album/5rXw9rHkAbbsjegFTu5PuD"
@@ -73,17 +78,17 @@
       <div class="link-collection">
         <span v-for="item in linksBlueht" :key="item.id" class="media-link">
           <a :href="item.url" rel="noopener">
-            <font-awesome-icon :icon="['fab', item.icon]" size="1x" />
+            <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
             {{ item.title }}</a
           >
         </span>
       </div>
     </template>
-    <!-- SOCIAL MEDIA LINKS -->
+    <!-- MEDIA LINKS -->
     <div class="social-media-container">
-      <span v-for="item in socialMediaLinks" :key="item.id">
+      <span v-for="item in mediaLinks" :key="item.id">
         <a :href="item.url" class="social-media-link"
-          ><font-awesome-icon :icon="['fab', item.icon]" size="3x"
+          ><font-awesome-icon :icon="[item.iconType, item.icon]" :size="item.iconSize"
         /></a>
       </span>
     </div>
@@ -112,13 +117,34 @@
         showBitterLinks: false,
         showWelkLinks: false,
         showBluehtLinks: false,
-        socialMediaLinks: [
-          { id: 'instagram-link', url: 'https://www.instagram.com/korawinter/', icon: 'instagram' },
-          { id: 'facebook-link', url: 'https://www.facebook.com/korawinterband', icon: 'facebook' },
+        mediaLinks: [
+          {
+            id: 'shop-link',
+            url: 'https://korawinter.bandcamp.com/merch',
+            iconType: 'fas',
+            icon: 'shopping-cart',
+            iconSize: '2x',
+          },
+          {
+            id: 'instagram-link',
+            url: 'https://www.instagram.com/korawinter/',
+            iconType: 'fab',
+            icon: 'instagram',
+            iconSize: '3x',
+          },
+          {
+            id: 'facebook-link',
+            url: 'https://www.facebook.com/korawinterband',
+            iconType: 'fab',
+            icon: 'facebook',
+            iconSize: '3x',
+          },
           {
             id: 'youtube-link',
             url: 'https://www.youtube.com/channel/UCBP_NZMedZzJpvR9LD2aaiw',
+            iconType: 'fab',
             icon: 'youtube-square',
+            iconSize: '3x',
           },
         ],
         linksBitter: [
@@ -272,18 +298,16 @@
 
 <style scoped>
   .container {
-    background-color: #171616;
+    background-color: #101010;
     padding-top: 69px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/cover-artwork/kora-winter-deine-freunde-hi-res.png');
+    background-image: url('../assets/logos/aew-logo-horizontal.svg');
+    background-size: 500px;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     background-blend-mode: darken;
   }
   h1 {
@@ -292,19 +316,22 @@
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 100;
     margin: 50px 0 10px 0;
   }
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
     margin: 15px 0 15px 0;
     padding: 2px;
-    text-decoration: none;
     border: none;
     padding: 10px;
     font-size: 1rem;
-    background-color: #e4252c;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     border-radius: 5px;
   }
   button:hover {
@@ -322,6 +349,7 @@
     width: 666px;
     margin: 30px 0 15px 0;
     justify-content: space-around;
+    align-items: center;
   }
   .social-media-link {
     color: #fff;
@@ -332,6 +360,10 @@
 
   /* MEDIA LINKS */
 
+  .media-icon {
+    margin-right: 5px;
+  }
+
   .media-link {
     border: 1px solid #fff;
     border-radius: 5px;
@@ -340,6 +372,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .button-icon {
+    margin-left: 10px;
   }
   a {
     padding: 5px;
@@ -361,6 +396,16 @@
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
+    /* .container {
+      background-color: green;
+    } */
+    h1 {
+      font-size: 2.5rem;
+      padding-top: 0;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
     .social-media-container {
       width: 333px;
     }
@@ -369,12 +414,15 @@
     }
     .youtube-player {
       width: 100%;
-    }
-    .artist-picture {
-      width: 100%;
+      height: 315px;
     }
     .spotify-player {
       width: 100%;
+      height: 210px;
+    }
+    button {
+      width: 100%;
+      border-radius: 0;
     }
     .link-collection {
       width: 100%;
@@ -383,41 +431,67 @@
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    .social-media-container {
-      width: 444px;
+    /* .container {
+      background-color: goldenrod;
+    } */
+    h1 {
+      font-size: 2.5rem;
+      padding-top: 0;
+    }
+    h2 {
+      font-size: 1.5rem;
     }
     .youtube-player {
-      width: 75%;
+      width: 560px;
+      height: 315px;
     }
     .spotify-player {
-      width: 75%;
+      width: 560px;
+      height: 210px;
+    }
+    button {
+      width: 560px;
     }
     .link-collection {
-      width: 75%;
+      width: 560px;
+    }
+    .social-media-container {
+      width: 560px;
     }
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
+    /* .container {
+      background-color: lightpink;
+    } */
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
+    /* .container {
+      background-color: orangered;
+    } */
+    .youtube-player {
+      width: 840px;
+      height: 473px;
+    }
     .spotify-player {
-      width: 75%;
+      width: 840px;
+      height: 210px;
+    }
+    button {
+      width: 840px;
+    }
+    .link-collection {
+      width: 840px;
     }
   }
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    .youtube-player {
-      width: 45%;
-    }
-    .spotify-player {
-      width: 45%;
-    }
-    .link-collection {
-      width: 666px;
-    }
+    /* .container {
+      background-color: brown;
+    } */
   }
 </style>
