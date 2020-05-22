@@ -348,9 +348,6 @@
     text-decoration: none;
     color: #fff;
   }
-  a:hover {
-    color: #e4252c;
-  }
 
   .link-collection {
     display: flex;
@@ -369,6 +366,10 @@
     }
     h2 {
       font-size: 1.5rem;
+    }
+    a {
+      padding: 2px;
+      font-size: 1rem;
     }
     .container-releases {
       border: none;
