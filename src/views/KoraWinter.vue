@@ -4,86 +4,74 @@
     <!-- YOUTUBE PLAYER -->
     <iframe
       class="youtube-player"
-      width="560"
-      height="315"
       src="https://www.youtube-nocookie.com/embed/uj_-J6dc9Po"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
     <!-- BITTER RELEASE -->
-    <h2>"BITTER" - 2020</h2>
-    <iframe
-      class="spotify-player"
-      src="https://open.spotify.com/embed/album/0rlhNo56LgYcBrHTvBrE4y"
-      frameborder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
-    ></iframe>
-    <button v-on:click="toggle('bitter')">
-      {{ showBitterLinks ? 'SHOW LESS' : 'SHOW MORE' }}
-      <font-awesome-icon
-        :icon="['fas', showBitterLinks ? 'caret-up' : 'caret-down']"
-        size="1x"
-        class="button-icon"
-      />
-    </button>
-    <template v-if="showBitterLinks">
-      <div class="link-collection">
-        <span v-for="item in linksBitter" :key="item.id" class="media-link">
-          <a :href="item.url" rel="noopener">
-            <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
-            {{ item.title }}</a
-          >
-        </span>
-      </div>
-    </template>
+    <div class="container-releases">
+      <h2>"BITTER" - 2020</h2>
+      <iframe
+        class="spotify-player"
+        src="https://open.spotify.com/embed/album/0rlhNo56LgYcBrHTvBrE4y"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      ></iframe>
+      <template>
+        <div class="link-collection">
+          <span v-for="item in linksBitter" :key="item.id" class="media-link">
+            <a :href="item.url" rel="noopener">
+              <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
+              {{ item.title }}</a
+            >
+          </span>
+        </div>
+      </template>
+    </div>
     <!-- WELK RELEASE -->
-    <h2>"Welk" - 2017</h2>
-    <iframe
-      class="spotify-player"
-      src="https://open.spotify.com/embed/album/1aj7iAfh1c1io39LPNi3t1"
-      height="210"
-      frameborder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
-    ></iframe>
-    <!-- <button v-on:click="toggle('welk')">
-      {{ showWelkLinks ? 'SHOW LESS' : 'SHOW MORE' }}
-    </button> -->
-    <template>
-      <div class="link-collection">
-        <span v-for="item in linksWelk" :key="item.id" class="media-link">
-          <a :href="item.url" rel="noopener">
-            <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
-            {{ item.title }}</a
-          >
-        </span>
-      </div>
-    </template>
+    <div class="container-releases">
+      <h2>"Welk" - 2017</h2>
+      <iframe
+        class="spotify-player"
+        src="https://open.spotify.com/embed/album/1aj7iAfh1c1io39LPNi3t1"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      ></iframe>
+      <template>
+        <div class="link-collection">
+          <span v-for="item in linksWelk" :key="item.id" class="media-link">
+            <a :href="item.url" rel="noopener">
+              <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
+              {{ item.title }}</a
+            >
+          </span>
+        </div>
+      </template>
+    </div>
     <!-- BLUEHT RELEASE -->
-    <h2>"Blüht" - 2015</h2>
-    <iframe
-      class="spotify-player"
-      src="https://open.spotify.com/embed/album/5rXw9rHkAbbsjegFTu5PuD"
-      height="270"
-      frameborder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
-    ></iframe>
-    <button v-on:click="toggle('blueht')">
-      {{ showBluehtLinks ? 'SHOW LESS' : 'SHOW MORE' }}
-    </button>
-    <template v-if="showBluehtLinks">
-      <div class="link-collection">
-        <span v-for="item in linksBlueht" :key="item.id" class="media-link">
-          <a :href="item.url" rel="noopener">
-            <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
-            {{ item.title }}</a
-          >
-        </span>
-      </div>
-    </template>
+    <div class="container-releases">
+      <h2>"Blüht" - 2015</h2>
+      <iframe
+        class="spotify-player"
+        src="https://open.spotify.com/embed/album/5rXw9rHkAbbsjegFTu5PuD"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      ></iframe>
+      <template>
+        <div class="link-collection">
+          <span v-for="item in linksBlueht" :key="item.id" class="media-link">
+            <a :href="item.url" rel="noopener">
+              <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
+              {{ item.title }}</a
+            >
+          </span>
+        </div>
+      </template>
+    </div>
     <!-- MEDIA LINKS -->
     <div class="social-media-container">
       <span v-for="item in mediaLinks" :key="item.id">
@@ -92,31 +80,14 @@
         /></a>
       </span>
     </div>
-    <!-- <router-link :to="{ name: 'Artists' }">GO BACK</router-link> -->
   </div>
 </template>
 
 <script>
   export default {
     name: 'KoraWinter',
-    methods: {
-      toggle(id) {
-        if (id === 'bitter') {
-          this.showBitterLinks = !this.showBitterLinks;
-        }
-        if (id === 'welk') {
-          this.showWelkLinks = !this.showWelkLinks;
-        }
-        if (id === 'blueht') {
-          this.showBluehtLinks = !this.showBluehtLinks;
-        }
-      },
-    },
     data() {
       return {
-        showBitterLinks: false,
-        showWelkLinks: false,
-        showBluehtLinks: false,
         mediaLinks: [
           {
             id: 'shop-link',
@@ -305,41 +276,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/logos/aew-logo-horizontal.svg');
+    background-image: url('../assets/cover-artwork/kora-winter-deine-freunde-hi-res.png');
     background-size: 500px;
     background-attachment: fixed;
     background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   h1 {
     font-size: 3rem;
     padding: 20px 0 20px 0;
   }
-
+  .container-releases {
+    text-align: center;
+    border: 1px solid rgb(60, 60, 60);
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+  }
   h2 {
     font-size: 2rem;
     font-weight: 100;
-    margin: 50px 0 10px 0;
-  }
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 0 10px 0;
     letter-spacing: 1px;
-    margin: 15px 0 15px 0;
-    padding: 2px;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    background-color: #fff;
-    color: #000;
-    border-radius: 5px;
-  }
-  button:hover {
-    cursor: pointer;
   }
   span {
     margin: 10px;
     font-size: 1.2rem;
+  }
+  span:hover {
+    border-color: #e4252c;
   }
 
   /* SOCIAL MEDIA LINKS */
@@ -353,6 +320,7 @@
   }
   .social-media-link {
     color: #fff;
+    transition: 0.2s ease;
   }
   .social-media-link:hover {
     color: #e4252c;
@@ -363,7 +331,6 @@
   .media-icon {
     margin-right: 5px;
   }
-
   .media-link {
     border: 1px solid #fff;
     border-radius: 5px;
@@ -396,9 +363,6 @@
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    /* .container {
-      background-color: green;
-    } */
     h1 {
       font-size: 2.5rem;
       padding-top: 0;
@@ -406,8 +370,12 @@
     h2 {
       font-size: 1.5rem;
     }
+    .container-releases {
+      border: none;
+      margin-top: 30px;
+    }
     .social-media-container {
-      width: 333px;
+      width: 100%;
     }
     .social-media-link {
       font-size: 1rem;
@@ -431,9 +399,6 @@
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    /* .container {
-      background-color: goldenrod;
-    } */
     h1 {
       font-size: 2.5rem;
       padding-top: 0;
@@ -462,16 +427,10 @@
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    /* .container {
-      background-color: lightpink;
-    } */
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    /* .container {
-      background-color: orangered;
-    } */
     .youtube-player {
       width: 840px;
       height: 473px;
@@ -490,8 +449,5 @@
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    /* .container {
-      background-color: brown;
-    } */
   }
 </style>
