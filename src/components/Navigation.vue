@@ -25,25 +25,14 @@
   export default {
     name: 'Navigation',
   };
-
-  let prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementById('nav').style.top = '0';
-    } else {
-      document.getElementById('nav').style.top = '-50px';
-    }
-    prevScrollpos = currentScrollPos;
-  };
 </script>
 
 <style scoped>
   #nav {
     z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     width: 100%;
-    padding: 10px;
+    height: 50px;
     position: fixed;
     top: 0;
     display: flex;
@@ -69,9 +58,9 @@
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    /* #nav {
-      background-color: green;
-    } */
+    #nav {
+      height: 40px;
+    }
     .item {
       font-size: 1rem;
     }
@@ -79,16 +68,16 @@
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    /* #nav {
-      background-color: lightgreen;
-    } */
+    #nav {
+      height: 40px;
+    }
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    /* #nav {
-      background-color: orange;
-    } */
+    #nav {
+      height: 50px;
+    }
     .item {
       font-size: 1.5rem;
     }
