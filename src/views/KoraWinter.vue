@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>KORA WINTER</h1>
-    <!-- YOUTUBE PLAYER -->
+
     <iframe
       class="youtube-player"
       src="https://www.youtube-nocookie.com/embed/uj_-J6dc9Po"
@@ -9,74 +9,32 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
-    <!-- BITTER RELEASE -->
-    <div class="container-releases">
-      <h2>"BITTER" - 2020</h2>
-      <iframe
-        class="spotify-player"
-        src="https://open.spotify.com/embed/album/0rlhNo56LgYcBrHTvBrE4y"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
-      ></iframe>
-      <template>
-        <div class="link-collection">
-          <span v-for="item in linksBitter" :key="item.id" class="media-link">
-            <a :href="item.url" rel="noopener">
-              <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
-              {{ item.title }}</a
-            >
-          </span>
-        </div>
-      </template>
-    </div>
-    <!-- WELK RELEASE -->
-    <div class="container-releases">
-      <h2>"Welk" - 2017</h2>
-      <iframe
-        class="spotify-player"
-        src="https://open.spotify.com/embed/album/1aj7iAfh1c1io39LPNi3t1"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
-      ></iframe>
-      <template>
-        <div class="link-collection">
-          <span v-for="item in linksWelk" :key="item.id" class="media-link">
-            <a :href="item.url" rel="noopener">
-              <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
-              {{ item.title }}</a
-            >
-          </span>
-        </div>
-      </template>
-    </div>
-    <!-- BLUEHT RELEASE -->
-    <div class="container-releases">
-      <h2>"Blüht" - 2015</h2>
-      <iframe
-        class="spotify-player"
-        src="https://open.spotify.com/embed/album/5rXw9rHkAbbsjegFTu5PuD"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
-      ></iframe>
-      <template>
-        <div class="link-collection">
-          <span v-for="item in linksBlueht" :key="item.id" class="media-link">
-            <a :href="item.url" rel="noopener">
-              <font-awesome-icon :icon="['fab', item.icon]" size="1x" class="media-icon" />
-              {{ item.title }}</a
-            >
-          </span>
-        </div>
-      </template>
-    </div>
-    <!-- MEDIA LINKS -->
-    <div class="social-media-container">
+
+    <SpotifyAndMedia
+      heading="BITTER - 2020"
+      spotifyUrl="https://open.spotify.com/embed/album/0rlhNo56LgYcBrHTvBrE4y"
+      :linkCollection="linksBitter"
+    />
+
+    <SpotifyAndMedia
+      heading="Welk - 2017"
+      spotifyUrl="https://open.spotify.com/embed/album/1aj7iAfh1c1io39LPNi3t1"
+      :linkCollection="linksWelk"
+    />
+
+    <SpotifyAndMedia
+      heading="Blüht - 2015"
+      spotifyUrl="https://open.spotify.com/embed/album/5rXw9rHkAbbsjegFTu5PuD"
+      :linkCollection="linksBlueht"
+    />
+
+    <div class="bottom-container">
       <span v-for="item in mediaLinks" :key="item.id">
-        <a :href="item.url" class="social-media-link"
-          ><font-awesome-icon :icon="[item.iconType, item.icon]" :size="item.iconSize"
+        <a class="bottom-link" :href="item.url"
+          ><font-awesome-icon
+            class="bottom-icon"
+            :icon="[item.iconType, item.icon]"
+            :size="item.iconSize"
         /></a>
       </span>
     </div>
@@ -84,8 +42,11 @@
 </template>
 
 <script>
+  import SpotifyAndMedia from '../components/SpotifyAndMedia';
+
   export default {
     name: 'KoraWinter',
+    components: { SpotifyAndMedia },
     data() {
       return {
         mediaLinks: [
@@ -288,72 +249,22 @@
     font-size: 3rem;
     padding: 20px 0 20px 0;
   }
-  .container-releases {
-    text-align: center;
-    border: 1px solid rgb(60, 60, 60);
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 100;
-    margin: 0 0 10px 0;
-    letter-spacing: 1px;
-  }
-  span {
-    margin: 10px;
-    font-size: 1.2rem;
-  }
-  span:hover {
-    border-color: #e4252c;
-  }
 
-  /* SOCIAL MEDIA LINKS */
+  /* BOTTOM LINKS */
 
-  .social-media-container {
+  .bottom-container {
     display: flex;
     width: 666px;
     margin: 30px 0 15px 0;
     justify-content: space-around;
     align-items: center;
   }
-  .social-media-link {
+  .bottom-link {
     color: #fff;
     transition: 0.2s ease;
   }
-  .social-media-link:hover {
+  .bottom-link:hover {
     color: #e4252c;
-  }
-
-  /* MEDIA LINKS */
-
-  .media-icon {
-    margin-right: 5px;
-  }
-  .media-link {
-    border: 1px solid #fff;
-    border-radius: 5px;
-    color: #fff;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .button-icon {
-    margin-left: 10px;
-  }
-  a {
-    padding: 5px;
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .link-collection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
 
   /* MEDIA QUERIES */
@@ -364,37 +275,18 @@
       font-size: 2.5rem;
       padding-top: 0;
     }
-    h2 {
-      font-size: 1.5rem;
-    }
-    a {
-      padding: 2px;
-      font-size: 1rem;
-    }
-    .container-releases {
-      border: none;
-      margin-top: 30px;
-    }
-    .social-media-container {
-      width: 100%;
-    }
-    .social-media-link {
-      font-size: 1rem;
-    }
     .youtube-player {
       width: 100%;
       height: 315px;
     }
-    .spotify-player {
+    .bottom-container {
       width: 100%;
-      height: 210px;
     }
-    button {
-      width: 100%;
-      border-radius: 0;
+    .bottom-link {
+      font-size: 1rem;
     }
-    .link-collection {
-      width: 100%;
+    .bottom-icon {
+      font-size: 1.5rem;
     }
   }
 
@@ -404,30 +296,21 @@
       font-size: 2.5rem;
       padding-top: 0;
     }
-    h2 {
-      font-size: 1.5rem;
-    }
     .youtube-player {
       width: 560px;
       height: 315px;
     }
-    .spotify-player {
-      width: 560px;
-      height: 210px;
-    }
-    button {
-      width: 560px;
-    }
-    .link-collection {
-      width: 560px;
-    }
-    .social-media-container {
+    .bottom-container {
       width: 560px;
     }
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+      padding: 20px 0 20px 0;
+    }
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
@@ -435,16 +318,6 @@
     .youtube-player {
       width: 840px;
       height: 473px;
-    }
-    .spotify-player {
-      width: 840px;
-      height: 210px;
-    }
-    button {
-      width: 840px;
-    }
-    .link-collection {
-      width: 840px;
     }
   }
 
