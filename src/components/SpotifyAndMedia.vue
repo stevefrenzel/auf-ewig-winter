@@ -114,7 +114,7 @@
     }
     .media-link {
       width: 40%;
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   }
 
