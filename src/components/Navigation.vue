@@ -11,7 +11,7 @@
         </ul>
       </div>
       <font-awesome-icon
-        v-if="isActive"
+        v-if="!isActive"
         @click="toggleClass()"
         v-bind:class="{ active: isActive }"
         class="toggle-button"
@@ -19,7 +19,7 @@
         size="1x"
       />
       <font-awesome-icon
-        v-if="!isActive"
+        v-if="isActive"
         @click="toggleClass()"
         v-bind:class="{ active: isActive }"
         class="toggle-button"
