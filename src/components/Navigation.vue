@@ -1,21 +1,31 @@
 <template>
   <div>
-    <nav id="nav">
-      <router-link :to="{ name: 'Start' }" class="item">AUF EWIG WINTER</router-link>
-      <router-link :to="{ name: 'Artists' }" class="item">ARTISTS</router-link>
-      <a
-        href="https://aufewigwinter.bandcamp.com/merch/auf-ewig-winter-embroided-t-shirt"
-        rel="noopener"
-        class="item"
-        >SHOP</a
-      >
-      <a
-        href="https://open.spotify.com/show/6P3GrTJDW22sxod54f1kRs?si=m9fyXMVWQUmNlWD9rwmHjQ"
-        rel="noopener"
-        class="item"
-        >PODCAST</a
-      >
-      <router-link :to="{ name: 'Legal Notice' }" class="item">LEGAL NOTICE</router-link>
+    <nav class="navbar">
+      <router-link class="brand-title" :to="{ name: 'Start' }">AUF EWIG WINTER</router-link>
+      <div class="navbar-links">
+        <ul>
+          <li><router-link :to="{ name: 'Artists' }">ARTISTS</router-link></li>
+          <li><a :href="shopLink" rel="noopener">SHOP</a></li>
+          <li><a :href="podcastLink" rel="noopener">PODCAST</a></li>
+          <li><router-link :to="{ name: 'Legal Notice' }">LEGAL NOTICE</router-link></li>
+        </ul>
+      </div>
+      <font-awesome-icon
+        v-if="isActive"
+        @click="toggleClass()"
+        v-bind:class="{ active: isActive }"
+        class="toggle-button"
+        :icon="['fas', 'bars']"
+        size="1x"
+      />
+      <font-awesome-icon
+        v-if="!isActive"
+        @click="toggleClass()"
+        v-bind:class="{ active: isActive }"
+        class="toggle-button"
+        :icon="['fas', 'times']"
+        size="1x"
+      />
     </nav>
     <router-view />
   </div>
@@ -24,33 +34,76 @@
 <script>
   export default {
     name: 'Navigation',
+    data() {
+      return {
+        isActive: false,
+        shopLink: 'https://aufewigwinter.bandcamp.com/merch/',
+        podcastLink:
+          'https://open.spotify.com/show/6P3GrTJDW22sxod54f1kRs?si=m9fyXMVWQUmNlWD9rwmHjQ',
+      };
+    },
+    methods: {
+      toggleClass: function() {
+        console.log(this.isActive);
+        this.isActive = !this.isActive;
+      },
+    },
   };
 </script>
 
 <style scoped>
-  #nav {
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    top: 0;
+  .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    transition: top 0.3s;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: fixed;
+    width: 100%;
   }
 
-  #nav a {
+  .brand-title {
     color: #e4252c;
     text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    transition: 0.3s ease;
   }
 
-  #nav a.router-link-exact-active {
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .navbar-links li {
+    list-style: none;
+    transition: 0.3s ease;
+  }
+  .navbar-links li:hover {
+    background-color: #333;
+  }
+
+  .navbar-links li a {
+    color: #e4252c;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+  }
+
+  .navbar a.router-link-exact-active {
     color: #fff;
   }
 
-  #nav .item:hover {
+  .toggle-button {
+    color: #e4252c;
+    position: absolute;
+    top: 0.9rem;
+    right: 1rem;
+    display: none;
+    transition: 0.3s ease;
+  }
+  .toggle-button:hover {
     color: #fff;
   }
 
@@ -58,42 +111,51 @@
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    #nav {
-      height: 40px;
+    .toggle-button {
+      display: flex;
     }
-    .item {
-      font-size: 1rem;
+    .navbar-links {
+      width: 100%;
+      display: none;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+    .navbar-links li {
+      text-align: center;
+    }
+    .navbar-links.active {
+      display: flex;
     }
   }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    #nav {
-      height: 40px;
-    }
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    #nav {
-      height: 50px;
-    }
-    .item {
+    .navbar-links li {
       font-size: 1.5rem;
     }
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    /* #nav {
-      background-color: orangered;
-    } */
+    .navbar-links li {
+      margin-left: 20px;
+    }
   }
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    /* #nav {
-      background-color: lightsalmon;
-    } */
+    .navbar-links li {
+      margin-left: 40px;
+    }
   }
 </style>
