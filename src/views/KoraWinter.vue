@@ -84,7 +84,7 @@
             id: 1,
             icon: 'spotify',
             title: 'Spotify',
-            url: 'https://open.spotify.com/album/15wCHlSd6QDwpJr6kJpvhT',
+            url: 'https://open.spotify.com/album/0rlhNo56LgYcBrHTvBrE4y',
           },
           {
             id: 2,
@@ -106,27 +106,21 @@
           },
           {
             id: 5,
-            icon: 'itunes',
-            title: 'iTunes',
-            url: 'https://music.apple.com/de/album/bitter/1481042976?app=itunes',
+            icon: 'amazon',
+            title: 'Amazon Music',
+            url: 'https://music.amazon.de/albums/B07VMDFZXT',
           },
           {
             id: 6,
-            icon: 'amazon',
-            title: 'Amazon Music',
-            url: 'https://amazon.de/dp/B07VMDFZXT?tag=songwhip0f-21',
-          },
-          {
-            id: 7,
             icon: 'napster',
             title: 'Napster',
             url: 'https://napster.com/kora-winter/bitter-single',
           },
           {
-            id: 8,
+            id: 7,
             icon: 'google-play',
             title: 'Google Play',
-            url: 'https://play.google.com/store/music/album?id=Bc2tjmecminjbj23vxh4pn5z77y',
+            url: 'https://play.google.com/music/m/Bc2tjmecminjbj23vxh4pn5z77y',
           },
         ],
         linksWelk: [
@@ -156,21 +150,21 @@
           },
           {
             id: 13,
-            icon: 'itunes',
-            title: 'iTunes',
-            url: 'https://music.apple.com/de/album/welk-ep/1224158236?app=itunes',
+            icon: 'amazon',
+            title: 'Amazon Music',
+            url: 'https://music.amazon.de/albums/B06Y3LNQP1',
           },
           {
             id: 14,
-            icon: 'amazon',
-            title: 'Amazon Music',
-            url: 'https://amazon.de/dp/B06Y3LNQP1?tag=songwhip0f-21',
+            icon: 'napster',
+            title: 'Napster',
+            url: 'https://napster.com/kora-winter/welk',
           },
           {
             id: 15,
             icon: 'google-play',
             title: 'Google Play',
-            url: 'https://play.google.com/store/music/album?id=By4bq4ouh5fule7k2wc2bnceuvm',
+            url: 'https://napster.com/kora-winter/welk',
           },
         ],
         linksBlueht: [
@@ -199,16 +193,10 @@
             url: 'https://music.apple.com/de/album/bl%C3%BCht/947376528?app=music',
           },
           {
-            id: 20,
-            icon: 'itunes',
-            title: 'iTunes',
-            url: 'https://music.apple.com/de/album/bl%C3%BCht/947376528?app=itunes',
-          },
-          {
             id: 21,
             icon: 'amazon',
             title: 'Amazon Music',
-            url: 'https://amazon.de/dp/B00QH3PR5M?tag=songwhip0f-21',
+            url: 'https://music.amazon.de/albums/B00QH3PR5M',
           },
           {
             id: 22,
@@ -220,7 +208,7 @@
             id: 23,
             icon: 'google-play',
             title: 'Google Play',
-            url: 'https://play.google.com/store/music/album?id=Bvvt6tvo5zaopeaurftdycnahey',
+            url: 'https://play.google.com/music/m/Bvvt6tvo5zaopeaurftdycnahey',
           },
         ],
       };
@@ -319,9 +307,5 @@
       width: 840px;
       height: 473px;
     }
-  }
-
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
   }
 </style>
