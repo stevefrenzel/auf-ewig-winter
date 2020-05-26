@@ -4,13 +4,15 @@
       <router-link class="brand-title" :to="{ name: 'Start' }">AUF EWIG WINTER</router-link>
 
       <div class="navbar-links" v-bind:class="{ active: isActive }">
-        <ul @click="toggleClass()">
-          <li>
+        <ul>
+          <li @click="toggleClass()">
             <router-link :to="{ name: 'Artists' }">ARTISTS</router-link>
           </li>
           <li><a :href="shopLink" rel="noopener">SHOP</a></li>
           <li><a :href="podcastLink" rel="noopener">PODCAST</a></li>
-          <li><router-link :to="{ name: 'Legal Notice' }">LEGAL NOTICE</router-link></li>
+          <li @click="toggleClass()">
+            <router-link :to="{ name: 'Legal Notice' }">LEGAL NOTICE</router-link>
+          </li>
         </ul>
       </div>
       <font-awesome-icon
