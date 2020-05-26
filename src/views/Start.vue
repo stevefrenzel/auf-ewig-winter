@@ -1,17 +1,29 @@
 <template>
   <div class="container">
-    <!-- <video autoplay muted loop id="video">
+    <video autoplay muted loop id="video">
       <source src="../assets/dust.mp4" type="video/mp4" />
-    </video> -->
+    </video>
     <div class="logo-container">
+      <!-- Use 100% wide / height auto <div> with background image here -->
       <figure>
-        <img src="../assets/logos/aew-logo-horizontal.svg" alt="AUF EWIG WINTER Logo Horizontal" />
+        <img
+          v-if="!isMobile"
+          id="horizontal-logo"
+          src="../assets/logos/aew-logo-horizontal.png"
+          alt="AUF EWIG WINTER Logo horizontal"
+        />
+        <img
+          v-if="isMobile"
+          id="vertical-logo"
+          src="../assets/logos/aew-logo-vertical.png"
+          alt="AUF EWIG WINTER Logo vertical"
+        />
       </figure>
     </div>
     <div class="social-media-container">
       <span v-for="item in socialMedia" :key="item.id">
-        <a :href="item.url" class="social-media-link"
-          ><font-awesome-icon class="icon" :icon="['fab', item.icon]" size="5x"
+        <a class="social-media-link" :href="item.url"
+          ><font-awesome-icon class="social-media-icon" :icon="['fab', item.icon]" size="5x"
         /></a>
       </span>
     </div>
@@ -23,6 +35,7 @@
     name: 'Start',
     data() {
       return {
+        isMobile: false,
         socialMedia: [
           { id: 1, url: 'http://instagram.com/aufewigwinter', icon: 'instagram' },
           { id: 2, url: 'http://facebook.com/aufewigwinter', icon: 'facebook' },
@@ -39,6 +52,7 @@
 
 <style scoped>
   #video {
+    z-index: -10;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -51,9 +65,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   .social-media-container {
-    background-color: #000;
     width: 50%;
     display: flex;
     justify-content: space-around;
@@ -67,43 +81,56 @@
   }
   img {
     width: 100%;
-    height: 300px;
-    border: 1px solid black;
+    height: auto;
   }
+
   /* MEDIA QUERIES */
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    .container {
+    /* .container {
       background-color: lightslategray;
+    } */
+    #vertical-logo {
+      width: 75%;
+    }
+    .social-media-container {
+      width: 75%;
+      margin-top: 20px;
+    }
+    .social-media-icon {
+      font-size: 3rem;
     }
   }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    .container {
+    /* .container {
       background-color: lightpink;
+    } */
+    #vertical-logo {
+      width: 30%;
     }
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    .container {
+    /* .container {
       background-color: lightseagreen;
-    }
+    } */
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    .container {
+    /* .container {
       background-color: yellowgreen;
-    }
+    } */
   }
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    .container {
+    /* .container {
       background-color: orangered;
-    }
+    } */
   }
 </style>
