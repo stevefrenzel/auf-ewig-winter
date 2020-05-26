@@ -14,6 +14,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faAmazon } from '@fortawesome/free-brands-svg-icons/faAmazon';
 import { faApple } from '@fortawesome/free-brands-svg-icons/faApple';
 import { faBandcamp } from '@fortawesome/free-brands-svg-icons/faBandcamp';
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons/faCaretDown';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons/faCaretUp';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook';
@@ -22,6 +23,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faItunes } from '@fortawesome/free-brands-svg-icons/faItunes';
 import { faNapster } from '@fortawesome/free-brands-svg-icons/faNapster';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons/faShoppingCart';
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { faSoundcloud } from '@fortawesome/free-brands-svg-icons/faSoundcloud';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons/faSpotify';
 import { faYoutubeSquare } from '@fortawesome/free-brands-svg-icons/faYoutubeSquare';
@@ -30,6 +32,7 @@ library.add(
   faAmazon,
   faApple,
   faBandcamp,
+  faBars,
   faCaretDown,
   faCaretUp,
   faFacebook,
@@ -38,6 +41,7 @@ library.add(
   faItunes,
   faNapster,
   faShoppingCart,
+  faTimes,
   faSoundcloud,
   faSpotify,
   faYoutubeSquare
