@@ -175,7 +175,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/cover-artwork/haxan-background.png');
+    background-image: url('../assets/backgrounds/haxan-background.png');
     background-size: 500px;
     background-attachment: fixed;
     background-blend-mode: darken;
