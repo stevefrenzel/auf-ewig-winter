@@ -97,6 +97,7 @@
     .container-releases {
       border: none;
       margin-top: 30px;
+      padding: 0;
     }
     h2 {
       font-size: 1.5rem;
