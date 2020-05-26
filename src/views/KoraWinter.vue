@@ -237,7 +237,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/cover-artwork/kora-winter-deine-freunde-hi-res.png');
+    background-image: url('../assets/backgrounds/kora-winter-background.png');
     background-size: 500px;
     background-attachment: fixed;
     background-blend-mode: darken;
