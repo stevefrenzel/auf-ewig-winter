@@ -2,9 +2,12 @@
   <div>
     <nav class="navbar">
       <router-link class="brand-title" :to="{ name: 'Start' }">AUF EWIG WINTER</router-link>
-      <div class="navbar-links">
-        <ul>
-          <li><router-link :to="{ name: 'Artists' }">ARTISTS</router-link></li>
+
+      <div class="navbar-links" v-bind:class="{ active: isActive }">
+        <ul @click="toggleClass()">
+          <li>
+            <router-link :to="{ name: 'Artists' }">ARTISTS</router-link>
+          </li>
           <li><a :href="shopLink" rel="noopener">SHOP</a></li>
           <li><a :href="podcastLink" rel="noopener">PODCAST</a></li>
           <li><router-link :to="{ name: 'Legal Notice' }">LEGAL NOTICE</router-link></li>
@@ -27,7 +30,9 @@
         size="1x"
       />
     </nav>
-    <router-view />
+    <transition name="fade">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -52,7 +57,19 @@
 </script>
 
 <style scoped>
+  /* TRANSITIONS */
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.3s;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
   .navbar {
+    z-index: 666;
     display: flex;
     justify-content: space-between;
     align-items: center;
