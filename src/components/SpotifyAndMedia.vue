@@ -1,6 +1,7 @@
 <template>
   <div class="container-releases">
     <h2>{{ heading }}</h2>
+    <Loader class="loader" />
     <iframe
       class="spotify-player"
       :src="spotifyUrl"
@@ -25,8 +26,11 @@
 </template>
 
 <script>
+  import Loader from '../components/Loader';
+
   export default {
     name: 'SpotifyAndMedia',
+    components: { Loader },
     props: {
       heading: {
         type: String,
