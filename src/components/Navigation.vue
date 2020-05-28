@@ -1,17 +1,32 @@
 <template>
   <div>
     <nav class="navbar">
-      <router-link class="brand-title" :to="{ name: 'Start' }">AUF EWIG WINTER</router-link>
+      <router-link :to="{ name: 'Start' }"
+        ><figure>
+          <img
+            id="horizontal-logo"
+            src="../assets/logos/aew-logo-horizontal.png"
+            alt="AUF EWIG WINTER Logo horizontal"
+          /></figure
+      ></router-link>
 
       <div class="navbar-links" v-bind:class="{ active: isActive }">
         <ul>
           <li @click="toggleClass()">
-            <router-link :to="{ name: 'Artists' }">ARTISTS</router-link>
+            <router-link class="internal-link" :to="{ name: 'Artists' }">ARTISTS</router-link>
           </li>
-          <li><a :href="shopLink" rel="noopener">SHOP</a></li>
-          <li><a :href="podcastLink" rel="noopener">PODCAST</a></li>
+          <li class="link-and-symbol">
+            <a class="external-link" :href="shopLink" rel="noopener">SHOP</a
+            ><font-awesome-icon class="icon" :icon="['fas', 'external-link-alt']" size="1x" />
+          </li>
+          <li class="link-and-symbol">
+            <a class="external-link" :href="podcastLink" rel="noopener">PODCAST</a>
+            <font-awesome-icon class="icon" :icon="['fas', 'external-link-alt']" size="1x" />
+          </li>
           <li @click="toggleClass()">
-            <router-link :to="{ name: 'Legal Notice' }">LEGAL NOTICE</router-link>
+            <router-link class="internal-link" :to="{ name: 'Legal Notice' }"
+              >LEGAL NOTICE</router-link
+            >
           </li>
         </ul>
       </div>
@@ -32,9 +47,9 @@
         size="1x"
       />
     </nav>
-    <transition name="fade">
-      <router-view />
-    </transition>
+    <!-- <transition name="fade"> -->
+    <router-view />
+    <!-- </transition> -->
   </div>
 </template>
 
@@ -51,7 +66,6 @@
     },
     methods: {
       toggleClass: function() {
-        console.log(this.isActive);
         this.isActive = !this.isActive;
       },
     },
@@ -59,8 +73,6 @@
 </script>
 
 <style scoped>
-  /* TRANSITIONS */
-
   .fade-enter-active,
   .fade-leave-active {
     transition: opacity 0.3s;
@@ -81,12 +93,9 @@
     width: 100%;
   }
 
-  .brand-title {
-    color: #e4252c;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin: 0.5rem;
-    transition: 0.3s ease;
+  #horizontal-logo {
+    margin: 0.5rem 0 0 0.5rem;
+    width: 200px;
   }
 
   .navbar-links ul {
@@ -106,18 +115,35 @@
   .navbar-links li a {
     color: #e4252c;
     text-decoration: none;
-    padding: 1rem;
     display: block;
+  }
+
+  .internal-link {
+    padding: 1rem;
   }
 
   .navbar a.router-link-exact-active {
     color: #fff;
   }
 
+  .link-and-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .external-link {
+    padding: 1rem 0.5rem 1rem 1rem;
+  }
+  .icon {
+    color: #e4252c;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
   .toggle-button {
     color: #e4252c;
     position: absolute;
-    top: 0.9rem;
+    top: 1.4rem;
     right: 1rem;
     display: none;
     transition: 0.3s ease;
@@ -138,10 +164,12 @@
       display: none;
     }
     .navbar {
+      height: 60px;
       flex-direction: column;
       align-items: flex-start;
     }
     .navbar-links ul {
+      background-color: rgba(0, 0, 0, 0.8);
       width: 100%;
       flex-direction: column;
     }
