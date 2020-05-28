@@ -1,22 +1,15 @@
 <template>
   <div class="container">
-    <video autoplay muted loop id="video">
+    <!-- <video autoplay muted loop id="video">
       <source src="../assets/dust.mp4" type="video/mp4" />
-    </video>
+    </video> -->
     <div class="logo-container">
       <!-- Use 100% wide / height auto <div> with background image here -->
       <figure>
         <img
-          v-if="!isMobile"
           id="horizontal-logo"
           src="../assets/logos/aew-logo-horizontal.png"
           alt="AUF EWIG WINTER Logo horizontal"
-        />
-        <img
-          v-if="isMobile"
-          id="vertical-logo"
-          src="../assets/logos/aew-logo-vertical.png"
-          alt="AUF EWIG WINTER Logo vertical"
         />
       </figure>
     </div>
@@ -35,7 +28,6 @@
     name: 'Start',
     data() {
       return {
-        isMobile: false,
         socialMedia: [
           { id: 1, url: 'http://instagram.com/aufewigwinter', icon: 'instagram' },
           { id: 2, url: 'http://facebook.com/aufewigwinter', icon: 'facebook' },
