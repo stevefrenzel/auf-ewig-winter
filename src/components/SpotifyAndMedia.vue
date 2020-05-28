@@ -1,7 +1,7 @@
 <template>
   <div class="container-releases">
     <h2>{{ heading }}</h2>
-    <Loader class="loader" />
+    <!-- <Loader class="loader" /> -->
     <iframe
       class="spotify-player"
       :src="spotifyUrl"
@@ -26,11 +26,11 @@
 </template>
 
 <script>
-  import Loader from '../components/Loader';
+  // import Loader from '../components/Loader';
 
   export default {
     name: 'SpotifyAndMedia',
-    components: { Loader },
+    // components: { Loader },
     props: {
       heading: {
         type: String,
@@ -53,13 +53,13 @@
     text-align: center;
     border: 1px solid rgb(60, 60, 60);
     margin-top: 30px;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 5px;
   }
   h2 {
     font-size: 2rem;
     font-weight: 100;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
     letter-spacing: 1px;
   }
   .media-icon {
@@ -88,6 +88,7 @@
   }
 
   .link-collection {
+    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -129,7 +130,7 @@
       font-size: 1.5rem;
     }
     .spotify-player {
-      width: 560px;
+      width: 520px;
       height: 210px;
     }
     .link-collection {
@@ -144,7 +145,7 @@
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     .spotify-player {
-      width: 840px;
+      width: 800px;
       height: 210px;
     }
     .link-collection {
