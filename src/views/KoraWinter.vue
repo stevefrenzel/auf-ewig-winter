@@ -4,10 +4,18 @@
 
     <iframe
       class="youtube-player"
-      src="https://www.youtube.com/embed/uj_-J6dc9Po"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      src="//cdn.iframe.ly/0KJzmqZ?playerjs=1&amp;click_to_play=true"
       allowfullscreen
+      scrolling="no"
+      allow="autoplay *; encrypted-media *; accelerometer; gyroscope; picture-in-picture"
+    ></iframe>
+
+    <iframe
+      class="follow-button"
+      src="https://open.spotify.com/follow/1/?uri=spotify:artist:3yrMI0nTunPO2waZSzP1wj&size=detail&theme=dark"
+      scrolling="no"
+      frameborder="0"
+      allowtransparency="true"
     ></iframe>
 
     <SpotifyAndMedia
@@ -225,7 +233,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/backgrounds/kora-winter-background.png');
+    background-image: url('../assets/backgrounds/kora-winter-background-min.jpg');
     background-size: 500px;
     background-attachment: fixed;
     background-blend-mode: darken;
@@ -236,6 +244,15 @@
   h1 {
     font-size: 3rem;
     padding: 20px 0 20px 0;
+  }
+
+  .youtube-player {
+    border: none;
+  }
+  .follow-button {
+    margin-top: 30px;
+    width: 840px;
+    height: 56px;
   }
 
   /* BOTTOM LINKS */
@@ -267,6 +284,9 @@
       width: 100%;
       height: 315px;
     }
+    .follow-button {
+      width: 100%;
+    }
     .bottom-container {
       width: 100%;
     }
@@ -288,6 +308,9 @@
       width: 560px;
       height: 315px;
     }
+    .follow-button {
+      width: 560px;
+    }
     .bottom-container {
       width: 560px;
     }
@@ -299,6 +322,9 @@
       font-size: 3rem;
       padding: 20px 0 20px 0;
     }
+    .follow-button {
+      width: 560px;
+    }
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
@@ -306,6 +332,9 @@
     .youtube-player {
       width: 840px;
       height: 473px;
+    }
+    .follow-button {
+      width: 840px;
     }
   }
 </style>
