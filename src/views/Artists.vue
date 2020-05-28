@@ -4,13 +4,13 @@
     <div class="artist-gallery">
       <router-link :to="{ name: 'Haxan' }" class="artist"
         ><figure>
-          <img src="../assets/artist-pictures/haxan-photo.jpg" alt="HAXAN Photo" />
+          <img src="../assets/artist-pictures/haxan-photo-min.jpg" alt="HAXAN Photo" />
         </figure>
         <figcaption>HAXAN</figcaption></router-link
       >
       <router-link :to="{ name: 'Kora Winter' }" class="artist"
         ><figure>
-          <img src="../assets/artist-pictures/kora-winter-photo.jpg" alt="Kora Winter Photo" />
+          <img src="../assets/artist-pictures/kora-winter-photo-min.jpg" alt="Kora Winter Photo" />
         </figure>
         <figcaption>KORA WINTER</figcaption></router-link
       >
