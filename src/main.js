@@ -2,12 +2,6 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 
-// BOOTSTRAP
-// import { BootstrapVue } from 'bootstrap-vue';
-// Vue.use(BootstrapVue);
-// import 'bootstrap/dist/css/bootstrap.css';
-// import 'bootstrap-vue/dist/bootstrap-vue.css';
-
 // FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -17,6 +11,7 @@ import { faBandcamp } from '@fortawesome/free-brands-svg-icons/faBandcamp';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons/faCaretDown';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons/faCaretUp';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook';
 import { faGooglePlay } from '@fortawesome/free-brands-svg-icons/faGooglePlay';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
@@ -35,6 +30,7 @@ library.add(
   faBars,
   faCaretDown,
   faCaretUp,
+  faExternalLinkAlt,
   faFacebook,
   faGooglePlay,
   faInstagram,
