@@ -1,36 +1,34 @@
 <template>
   <div class="container-releases">
     <h2>{{ heading }}</h2>
-    <!-- <Loader class="loader" /> -->
-    <iframe
-      class="spotify-player"
-      :src="spotifyUrl"
-      frameborder="0"
-      allowtransparency="true"
-    ></iframe>
-    <template>
-      <div class="link-collection">
-        <a
-          class="media-link"
-          :href="item.url"
-          rel="noopener"
-          v-for="item in linkCollection"
-          :key="item.id"
-        >
-          <font-awesome-icon class="media-icon" :icon="['fab', item.icon]" size="1x" />
-          {{ item.title }}</a
-        >
-      </div>
-    </template>
+
+    <Loader class="loader" />
+
+    <SpotifyPlayer :url="spotifyUrl" />
+
+    <div class="link-collection">
+      <a
+        class="media-link"
+        :href="item.url"
+        rel="noopener"
+        v-for="item in linkCollection"
+        :key="item.id"
+      >
+        <font-awesome-icon class="media-icon" :icon="['fab', item.icon]" size="1x" />
+        {{ item.title }}</a
+      >
+    </div>
   </div>
 </template>
 
 <script>
-  // import Loader from '../components/Loader';
+  const SpotifyPlayer = () =>
+    import(/* webpackChunkName: "Spotify Player" */ '../components/SpotifyPlayer');
+  const Loader = () => import(/* webpackChunkName: "Loader" */ '../components/Loader');
 
   export default {
     name: 'SpotifyAndMedia',
-    // components: { Loader },
+    components: { Loader, SpotifyPlayer },
     props: {
       heading: {
         type: String,
@@ -53,7 +51,6 @@
     text-align: center;
     border: 1px solid rgb(60, 60, 60);
     margin-top: 30px;
-    /* padding: 20px; */
     border-radius: 5px;
   }
   h2 {
@@ -94,10 +91,10 @@
     justify-content: center;
     align-items: center;
   }
+  .loader {
+    display: none;
+  }
 
-  /* MEDIA QUERIES */
-
-  /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
     .container-releases {
       border: none;
@@ -111,10 +108,6 @@
       padding: 2px;
       font-size: 1rem;
     }
-    .spotify-player {
-      width: 100%;
-      height: 210px;
-    }
     .link-collection {
       width: 100%;
     }
@@ -123,37 +116,17 @@
       font-size: 0.8rem;
     }
   }
-
-  /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     h2 {
       font-size: 1.5rem;
-    }
-    .spotify-player {
-      width: 520px;
-      height: 210px;
     }
     .link-collection {
       width: 560px;
     }
   }
-
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-  }
-
-  /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    .spotify-player {
-      width: 800px;
-      height: 210px;
-    }
     .link-collection {
       width: 840px;
     }
-  }
-
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
   }
 </style>
