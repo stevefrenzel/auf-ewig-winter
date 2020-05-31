@@ -1,5 +1,13 @@
 <template>
-  <iframe class="youtube-player" :src="url" frameborder="0" allowfullscreen scrolling="no"></iframe>
+  <div class="youtube-player-container">
+    <iframe
+      class="youtube-player"
+      :src="url"
+      frameborder="0"
+      allowfullscreen
+      scrolling="no"
+    ></iframe>
+  </div>
 </template>
 
 <script>
@@ -16,9 +24,12 @@
 
 <style scoped>
   @media only screen and (max-width: 600px) {
+    .youtube-player-container {
+      width: 95%;
+    }
     .youtube-player {
       width: 100%;
-      height: auto;
+      /* height: auto; */
     }
   }
   @media only screen and (min-width: 600px) {
