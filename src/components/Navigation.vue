@@ -43,9 +43,9 @@
         size="1x"
       />
     </nav>
-    <!-- <transition name="fade"> -->
-    <router-view />
-    <!-- </transition> -->
+    <transition name="fade">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -182,6 +182,7 @@
   @media only screen and (min-width: 992px) {
     .navbar-links li {
       margin-left: 20px;
+      font-size: 1.5rem;
     }
   }
 
