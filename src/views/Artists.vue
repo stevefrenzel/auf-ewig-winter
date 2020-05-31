@@ -2,18 +2,26 @@
   <div class="container">
     <h1>ARTISTS</h1>
     <div class="artist-gallery">
-      <router-link :to="{ name: 'Haxan' }" class="artist"
-        ><figure>
-          <img src="../assets/artist-pictures/haxan-photo-min.jpg" alt="HAXAN Photo" />
-        </figure>
-        <figcaption>HAXAN</figcaption></router-link
-      >
-      <router-link :to="{ name: 'Kora Winter' }" class="artist"
-        ><figure>
-          <img src="../assets/artist-pictures/kora-winter-photo-min.jpg" alt="Kora Winter Photo" />
-        </figure>
-        <figcaption>KORA WINTER</figcaption></router-link
-      >
+      <div class="image-container">
+        <router-link :to="{ name: 'Haxan' }">
+          <figure>
+            <img src="../assets/artist-pictures/haxan-photo-min.jpg" alt="HAXAN Photo" />
+          </figure>
+          <figcaption class="centered">HAXAN</figcaption>
+        </router-link>
+      </div>
+
+      <div class="image-container">
+        <router-link :to="{ name: 'Kora Winter' }">
+          <figure>
+            <img
+              src="../assets/artist-pictures/kora-winter-photo-min.jpg"
+              alt="Kora Winter Photo"
+            />
+          </figure>
+          <figcaption class="centered">KORA WINTER</figcaption>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -41,32 +49,31 @@
     justify-content: center;
     flex-wrap: wrap;
   }
-  .artist {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
   a {
+    color: white;
     text-decoration: none;
     font-size: 1.5rem;
+    transition: 0.3s ease;
   }
   a:hover {
     color: #e4252c;
   }
-  /* .centered {
+  .image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
     position: absolute;
-    top: 0%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  } */
+    font-size: 3rem;
+  }
   img {
     width: 222px;
     margin: 20px;
   }
-
-  /* MEDIA QUERIES */
-
-  /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     h1 {
       font-size: 3rem;
@@ -78,8 +85,6 @@
       width: 333px;
     }
   }
-
-  /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     a {
       font-size: 2rem;
