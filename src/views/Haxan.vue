@@ -191,10 +191,6 @@
     padding: 20px 0 20px 0;
   }
 
-  .youtube-player {
-    border: none;
-  }
-
   /* BOTTOM LINKS */
 
   .bottom-container {
@@ -216,13 +212,12 @@
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
+    .container {
+      /* background-color: lightblue; */
+    }
     h1 {
       font-size: 2.5rem;
       padding-top: 0;
-    }
-    .youtube-player {
-      width: 100%;
-      height: 315px;
     }
     .bottom-container {
       width: 100%;
@@ -241,10 +236,6 @@
       font-size: 2.5rem;
       padding-top: 0;
     }
-    .youtube-player {
-      width: 560px;
-      height: 315px;
-    }
     .bottom-container {
       width: 560px;
     }
@@ -260,9 +251,5 @@
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    .youtube-player {
-      width: 840px;
-      height: 473px;
-    }
   }
 </style>
