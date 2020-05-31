@@ -19,7 +19,7 @@
 <style scoped>
   @media only screen and (max-width: 600px) {
     .spotify-player {
-      width: 100%;
+      width: 95%;
       height: 210px;
     }
   }
