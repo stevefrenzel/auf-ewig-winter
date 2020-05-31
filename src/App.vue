@@ -5,7 +5,8 @@
 </template>
 
 <script>
-  import Navigation from '../src/components/Navigation';
+  const Navigation = () =>
+    import(/* webpackChunkName: "Navigation" */ '../src/components/Navigation');
 
   export default {
     components: { Navigation },
