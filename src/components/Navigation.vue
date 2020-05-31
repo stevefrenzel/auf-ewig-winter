@@ -13,20 +13,16 @@
       <div class="navbar-links" v-bind:class="{ active: isActive }">
         <ul>
           <li @click="toggleClass()">
-            <router-link class="internal-link" :to="{ name: 'Artists' }">ARTISTS</router-link>
+            <router-link :to="{ name: 'Artists' }">ARTISTS</router-link>
           </li>
-          <li class="link-and-symbol">
-            <a class="external-link" :href="shopLink" rel="noopener">SHOP</a
-            ><font-awesome-icon class="icon" :icon="['fas', 'external-link-alt']" size="1x" />
+          <li>
+            <a :href="shopLink" rel="noopener">SHOP</a>
           </li>
-          <li class="link-and-symbol">
-            <a class="external-link" :href="podcastLink" rel="noopener">PODCAST</a>
-            <font-awesome-icon class="icon" :icon="['fas', 'external-link-alt']" size="1x" />
+          <li>
+            <a :href="podcastLink" rel="noopener">PODCAST</a>
           </li>
           <li @click="toggleClass()">
-            <router-link class="internal-link" :to="{ name: 'Legal Notice' }"
-              >LEGAL NOTICE</router-link
-            >
+            <router-link :to="{ name: 'Legal Notice' }">LEGAL NOTICE</router-link>
           </li>
         </ul>
       </div>
@@ -116,6 +112,7 @@
     color: #e4252c;
     text-decoration: none;
     display: block;
+    padding: 1rem;
   }
 
   .internal-link {
@@ -124,20 +121,6 @@
 
   .navbar a.router-link-exact-active {
     color: #fff;
-  }
-
-  .link-and-symbol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .external-link {
-    padding: 1rem 0.5rem 1rem 1rem;
-  }
-  .icon {
-    color: #e4252c;
-    font-size: 1rem;
-    margin-right: 1rem;
   }
 
   .toggle-button {
@@ -183,12 +166,15 @@
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
+    .navbar-links li {
+      font-size: 0.8rem;
+    }
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     .navbar-links li {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 
