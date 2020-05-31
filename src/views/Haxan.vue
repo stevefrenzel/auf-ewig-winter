@@ -2,21 +2,11 @@
   <div class="container">
     <h1>HAXAN</h1>
 
-    <iframe
-      class="youtube-player"
-      src="//cdn.iframe.ly/gkDi71H?playerjs=1&amp;click_to_play=true"
-      allowfullscreen
-      scrolling="no"
-      allow="autoplay *; encrypted-media *; accelerometer; gyroscope; picture-in-picture"
-    ></iframe>
+    <YouTubePlayer url="//cdn.iframe.ly/gkDi71H?playerjs=1&amp;click_to_play=true" />
 
-    <iframe
-      class="follow-button"
-      src="https://open.spotify.com/follow/1/?uri=spotify:artist:5VARgwnLSbKfnZZvYFWTUu&size=detail&theme=dark"
-      scrolling="no"
-      frameborder="0"
-      allowtransparency="true"
-    ></iframe>
+    <SpotifyFollowButton
+      url="https://open.spotify.com/follow/1/?uri=spotify:artist:5VARgwnLSbKfnZZvYFWTUu&size=detail&theme=dark"
+    />
 
     <SpotifyAndMedia
       heading="WAR - 2020"
@@ -44,11 +34,16 @@
 </template>
 
 <script>
-  import SpotifyAndMedia from '../components/SpotifyAndMedia';
+  const YouTubePlayer = () =>
+    import(/* webpackChunkName: "YouTube Player" */ '../components/YouTubePlayer');
+  const SpotifyFollowButton = () =>
+    import(/* webpackChunkName: "Spotify Follow Button" */ '../components/SpotifyFollowButton');
+  const SpotifyAndMedia = () =>
+    import(/* webpackChunkName: "Spotify & Media" */ '../components/SpotifyAndMedia');
 
   export default {
     name: 'KoraWinter',
-    components: { SpotifyAndMedia },
+    components: { YouTubePlayer, SpotifyFollowButton, SpotifyAndMedia },
     data() {
       return {
         mediaLinks: [
@@ -199,11 +194,6 @@
   .youtube-player {
     border: none;
   }
-  .follow-button {
-    margin-top: 30px;
-    width: 840px;
-    height: 56px;
-  }
 
   /* BOTTOM LINKS */
 
@@ -234,9 +224,6 @@
       width: 100%;
       height: 315px;
     }
-    .follow-button {
-      width: 100%;
-    }
     .bottom-container {
       width: 100%;
     }
@@ -258,9 +245,6 @@
       width: 560px;
       height: 315px;
     }
-    .follow-button {
-      width: 560px;
-    }
     .bottom-container {
       width: 560px;
     }
@@ -272,9 +256,6 @@
       font-size: 3rem;
       padding: 20px 0 20px 0;
     }
-    .follow-button {
-      width: 560px;
-    }
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
@@ -282,9 +263,6 @@
     .youtube-player {
       width: 840px;
       height: 473px;
-    }
-    .follow-button {
-      width: 840px;
     }
   }
 </style>
