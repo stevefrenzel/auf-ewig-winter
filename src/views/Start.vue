@@ -1,18 +1,16 @@
 <template>
   <div class="container">
-    <!-- <video autoplay muted loop id="video">
+    <video autoplay muted loop id="video">
       <source src="../assets/dust.mp4" type="video/mp4" />
-    </video> -->
+    </video>
+
     <div class="logo-container">
-      <!-- Use 100% wide / height auto <div> with background image here -->
-      <figure>
-        <img
-          id="horizontal-logo"
-          src="../assets/logos/aew-logo-horizontal.png"
-          alt="AUF EWIG WINTER Logo horizontal"
-        />
-      </figure>
+      <picture>
+        <source media="(max-width:600px)" srcset="../assets/logos/aew-logo-vertical.png" />
+        <img src="../assets/logos/aew-logo-horizontal.png" alt="AUF EWIG WINTER Logo Horizontal" />
+      </picture>
     </div>
+
     <div class="social-media-container">
       <span v-for="item in socialMedia" :key="item.id">
         <a class="social-media-link" :href="item.url"
@@ -70,6 +68,10 @@
   }
   a:hover {
     color: #fff;
+  }
+  source {
+    width: 100px;
+    height: 100px;
   }
   img {
     width: 100%;
