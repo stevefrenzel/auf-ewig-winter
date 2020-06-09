@@ -5,10 +5,9 @@
     </video>
 
     <div class="logo-container">
-      <picture>
-        <source media="(max-width:600px)" srcset="../assets/logos/aew-logo-vertical.png" />
+      <figure>
         <img src="../assets/logos/aew-logo-horizontal.png" alt="AUF EWIG WINTER Logo Horizontal" />
-      </picture>
+      </figure>
     </div>
 
     <div class="social-media-container">
@@ -73,7 +72,7 @@
     width: 100px;
     height: 100px;
   }
-  img {
+  figure img {
     width: 100%;
     height: auto;
   }
@@ -85,7 +84,10 @@
     /* .container {
       background-color: lightslategray;
     } */
-    #vertical-logo {
+    video {
+      display: none;
+    }
+    figure img {
       width: 75%;
     }
     .social-media-container {
@@ -102,8 +104,11 @@
     /* .container {
       background-color: lightpink;
     } */
-    #vertical-logo {
-      width: 30%;
+    figure img {
+      width: 75%;
+    }
+    .social-media-icon {
+      font-size: 3rem;
     }
   }
 
@@ -112,6 +117,9 @@
     /* .container {
       background-color: lightseagreen;
     } */
+    .social-media-icon {
+      font-size: 4rem;
+    }
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
@@ -119,6 +127,9 @@
     /* .container {
       background-color: yellowgreen;
     } */
+    .social-media-icon {
+      font-size: 5rem;
+    }
   }
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
