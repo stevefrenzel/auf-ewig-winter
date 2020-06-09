@@ -152,11 +152,12 @@
       align-items: flex-start;
     }
     .navbar-links ul {
-      background-color: rgba(0, 0, 0, 0.8);
+      /* background-color: rgba(0, 0, 0, 0.8); */
       width: 100%;
       flex-direction: column;
     }
     .navbar-links li {
+      background-color: rgba(0, 0, 0, 0.8);
       text-align: center;
     }
     .navbar-links.active {
