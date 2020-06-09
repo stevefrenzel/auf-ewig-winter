@@ -95,7 +95,7 @@
       margin-top: 20px;
     }
     .social-media-icon {
-      font-size: 3rem;
+      font-size: 2rem;
     }
   }
 
