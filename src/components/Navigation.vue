@@ -68,7 +68,7 @@
     data() {
       return {
         isActive: false,
-        shopLink: 'https://aufewigwinter.bandcamp.com/merch/',
+        shopLink: 'https://aufewigwinter.bandcamp.com/',
         podcastLink:
           'https://open.spotify.com/show/6P3GrTJDW22sxod54f1kRs?si=m9fyXMVWQUmNlWD9rwmHjQ',
       };
@@ -134,7 +134,7 @@
     padding: 1rem;
   }
 
-  .navbar a.router-link-exact-active {
+  #navbar a.router-link-exact-active {
     color: #fff;
   }
 
@@ -152,7 +152,6 @@
 
   /* MEDIA QUERIES */
 
-  /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
     .toggle-button {
       display: flex;
@@ -161,13 +160,12 @@
       width: 100%;
       display: none;
     }
-    .navbar {
+    #navbar {
       height: 60px;
       flex-direction: column;
       align-items: flex-start;
     }
     .navbar-links ul {
-      /* background-color: rgba(0, 0, 0, 0.8); */
       width: 100%;
       flex-direction: column;
     }
@@ -180,21 +178,18 @@
     }
   }
 
-  /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     .navbar-links li {
       font-size: 0.8rem;
     }
   }
 
-  /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     .navbar-links li {
       font-size: 1.2rem;
     }
   }
 
-  /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     .navbar-links li {
       margin-left: 20px;
@@ -202,7 +197,6 @@
     }
   }
 
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     .navbar-links li {
       margin-left: 40px;
