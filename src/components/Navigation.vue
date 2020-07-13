@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar">
+    <nav id="navbar">
       <router-link :to="{ name: 'Start' }"
         ><figure>
           <img
@@ -22,7 +22,9 @@
             <a :href="podcastLink" rel="noopener">PODCAST</a>
           </li>
           <li @click="toggleClass()">
-            <router-link :to="{ name: 'Legal Notice' }">LEGAL NOTICE</router-link>
+            <router-link :to="{ name: 'Legal Notice' }"
+              >LEGAL NOTICE</router-link
+            >
           </li>
         </ul>
       </div>
@@ -50,6 +52,17 @@
 </template>
 
 <script>
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById('navbar').style.top = '0';
+    } else {
+      document.getElementById('navbar').style.top = '-70px';
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
   export default {
     name: 'Navigation',
     data() {
@@ -78,7 +91,7 @@
     opacity: 0;
   }
 
-  .navbar {
+  #navbar {
     z-index: 666;
     display: flex;
     justify-content: space-between;
@@ -87,6 +100,8 @@
     color: #fff;
     position: fixed;
     width: 100%;
+    top: 0;
+    transition: top 1s;
   }
 
   #horizontal-logo {
