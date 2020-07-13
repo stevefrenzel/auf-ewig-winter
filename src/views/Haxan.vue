@@ -2,7 +2,9 @@
   <div class="container">
     <h1>HAXAN</h1>
 
-    <YouTubePlayer url="//cdn.iframe.ly/gkDi71H?playerjs=1&amp;click_to_play=true" />
+    <YouTubePlayer
+      url="//cdn.iframe.ly/DnNXwOE?playerjs=1&click_to_play=true&iframe=1"
+    />
 
     <SpotifyFollowButton
       url="https://open.spotify.com/follow/1/?uri=spotify:artist:5VARgwnLSbKfnZZvYFWTUu&size=detail&theme=dark"
@@ -35,11 +37,17 @@
 
 <script>
   const YouTubePlayer = () =>
-    import(/* webpackChunkName: "YouTube Player" */ '../components/YouTubePlayer');
+    import(
+      /* webpackChunkName: "YouTube Player" */ '../components/YouTubePlayer'
+    );
   const SpotifyFollowButton = () =>
-    import(/* webpackChunkName: "Spotify Follow Button" */ '../components/SpotifyFollowButton');
+    import(
+      /* webpackChunkName: "Spotify Follow Button" */ '../components/SpotifyFollowButton'
+    );
   const SpotifyAndMedia = () =>
-    import(/* webpackChunkName: "Spotify & Media" */ '../components/SpotifyAndMedia');
+    import(
+      /* webpackChunkName: "Spotify & Media" */ '../components/SpotifyAndMedia'
+    );
 
   export default {
     name: 'KoraWinter',
@@ -56,21 +64,21 @@
           // },
           {
             id: 'instagram-link',
-            url: 'https://www.instagram.com/korawinter/',
+            url: 'https://www.instagram.com/haxan030/',
             iconType: 'fab',
             icon: 'instagram',
             iconSize: '3x',
           },
           {
             id: 'facebook-link',
-            url: 'https://www.facebook.com/korawinterband',
+            url: 'https://www.facebook.com/HAXAN030/',
             iconType: 'fab',
             icon: 'facebook',
             iconSize: '3x',
           },
           {
             id: 'youtube-link',
-            url: 'https://www.youtube.com/channel/UCBP_NZMedZzJpvR9LD2aaiw',
+            url: 'https://www.youtube.com/channel/UCIE-US9NVCGmUML4gfE1_SA',
             iconType: 'fab',
             icon: 'youtube-square',
             iconSize: '3x',
