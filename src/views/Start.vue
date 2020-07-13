@@ -18,8 +18,8 @@
         <a class="social-media-link" :href="item.url"
           ><font-awesome-icon
             class="social-media-icon"
-            :icon="['fab', item.icon]"
-            size="5x"
+            :icon="[item.iconType, item.icon]"
+            :size="item.iconSize"
         /></a>
       </span>
     </div>
@@ -34,14 +34,31 @@
         socialMedia: [
           {
             id: 1,
+            url: 'https://aufewigwinter.bandcamp.com/',
+            icon: 'shopping-cart',
+            iconType: 'fas',
+            iconSize: '2x',
+          },
+          {
+            id: 2,
             url: 'http://instagram.com/aufewigwinter',
             icon: 'instagram',
+            iconType: 'fab',
+            iconSize: '3x',
           },
-          { id: 2, url: 'http://facebook.com/aufewigwinter', icon: 'facebook' },
           {
             id: 3,
+            url: 'http://facebook.com/aufewigwinter',
+            icon: 'facebook',
+            iconType: 'fab',
+            iconSize: '3x',
+          },
+          {
+            id: 4,
             url: 'https://www.youtube.com/channel/UC_PWRVbYIbazxwLfLJsLTFA',
             icon: 'youtube-square',
+            iconType: 'fab',
+            iconSize: '3x',
           },
         ],
       };
@@ -70,6 +87,7 @@
     width: 50%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
   a {
     color: #e4252c;
@@ -108,21 +126,6 @@
   @media only screen and (min-width: 600px) {
     figure img {
       width: 75%;
-    }
-    .social-media-icon {
-      font-size: 3rem;
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    .social-media-icon {
-      font-size: 4rem;
-    }
-  }
-
-  @media only screen and (min-width: 992px) {
-    .social-media-icon {
-      font-size: 5rem;
     }
   }
 </style>
