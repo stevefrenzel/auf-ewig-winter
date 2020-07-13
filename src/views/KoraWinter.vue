@@ -2,7 +2,9 @@
   <div class="container">
     <h1>KORA WINTER</h1>
 
-    <YouTubePlayer url="//cdn.iframe.ly/0KJzmqZ?playerjs=1&amp;click_to_play=true" />
+    <YouTubePlayer
+      url="//cdn.iframe.ly/0KJzmqZ?playerjs=1&amp;click_to_play=true"
+    />
 
     <SpotifyFollowButton
       url="https://open.spotify.com/follow/1/?uri=spotify:artist:3yrMI0nTunPO2waZSzP1wj&size=detail&theme=dark"
@@ -41,11 +43,17 @@
 
 <script>
   const YouTubePlayer = () =>
-    import(/* webpackChunkName: "YouTube Player" */ '../components/YouTubePlayer');
+    import(
+      /* webpackChunkName: "YouTube Player" */ '../components/YouTubePlayer'
+    );
   const SpotifyFollowButton = () =>
-    import(/* webpackChunkName: "Spotify Follow Button" */ '../components/SpotifyFollowButton');
+    import(
+      /* webpackChunkName: "Spotify Follow Button" */ '../components/SpotifyFollowButton'
+    );
   const SpotifyAndMedia = () =>
-    import(/* webpackChunkName: "Spotify & Media" */ '../components/SpotifyAndMedia');
+    import(
+      /* webpackChunkName: "Spotify & Media" */ '../components/SpotifyAndMedia'
+    );
 
   export default {
     name: 'KoraWinter',
@@ -149,7 +157,8 @@
             id: 12,
             icon: 'apple',
             title: 'Apple Music',
-            url: 'https://music.apple.com/de/album/welk-ep/1224158236?app=music',
+            url:
+              'https://music.apple.com/de/album/welk-ep/1224158236?app=music',
           },
           {
             id: 13,
@@ -193,7 +202,8 @@
             id: 19,
             icon: 'apple',
             title: 'Apple Music',
-            url: 'https://music.apple.com/de/album/bl%C3%BCht/947376528?app=music',
+            url:
+              'https://music.apple.com/de/album/bl%C3%BCht/947376528?app=music',
           },
           {
             id: 21,
