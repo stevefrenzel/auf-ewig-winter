@@ -6,14 +6,20 @@
 
     <div class="logo-container">
       <figure>
-        <img src="../assets/logos/aew-logo-horizontal.png" alt="AUF EWIG WINTER Logo Horizontal" />
+        <img
+          src="../assets/logos/aew-logo-horizontal.png"
+          alt="AUF EWIG WINTER Logo Horizontal"
+        />
       </figure>
     </div>
 
     <div class="social-media-container">
       <span v-for="item in socialMedia" :key="item.id">
         <a class="social-media-link" :href="item.url"
-          ><font-awesome-icon class="social-media-icon" :icon="['fab', item.icon]" size="5x"
+          ><font-awesome-icon
+            class="social-media-icon"
+            :icon="['fab', item.icon]"
+            size="5x"
         /></a>
       </span>
     </div>
@@ -26,7 +32,11 @@
     data() {
       return {
         socialMedia: [
-          { id: 1, url: 'http://instagram.com/aufewigwinter', icon: 'instagram' },
+          {
+            id: 1,
+            url: 'http://instagram.com/aufewigwinter',
+            icon: 'instagram',
+          },
           { id: 2, url: 'http://facebook.com/aufewigwinter', icon: 'facebook' },
           {
             id: 3,
@@ -79,11 +89,7 @@
 
   /* MEDIA QUERIES */
 
-  /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    /* .container {
-      background-color: lightslategray;
-    } */
     video {
       display: none;
     }
@@ -99,11 +105,7 @@
     }
   }
 
-  /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    /* .container {
-      background-color: lightpink;
-    } */
     figure img {
       width: 75%;
     }
@@ -112,30 +114,15 @@
     }
   }
 
-  /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    /* .container {
-      background-color: lightseagreen;
-    } */
     .social-media-icon {
       font-size: 4rem;
     }
   }
 
-  /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    /* .container {
-      background-color: yellowgreen;
-    } */
     .social-media-icon {
       font-size: 5rem;
     }
-  }
-
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    /* .container {
-      background-color: orangered;
-    } */
   }
 </style>
