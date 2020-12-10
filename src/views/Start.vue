@@ -9,13 +9,14 @@
         <img
           src="../assets/logos/aew-logo-horizontal.png"
           alt="AUF EWIG WINTER Logo Horizontal"
+          loading="lazy"
         />
       </figure>
     </div>
 
     <div class="social-media-container">
       <span v-for="item in socialMedia" :key="item.id">
-        <a class="social-media-link" :href="item.url"
+        <a class="social-media-link" :href="item.url" rel="noopener noreferrer"
           ><font-awesome-icon
             class="social-media-icon"
             :icon="[item.iconType, item.icon]"
