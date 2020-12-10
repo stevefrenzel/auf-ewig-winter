@@ -10,11 +10,15 @@
       <a
         class="media-link"
         :href="item.url"
-        rel="noopener"
+        rel="noopener noreferrer"
         v-for="item in linkCollection"
         :key="item.id"
       >
-        <font-awesome-icon class="media-icon" :icon="['fab', item.icon]" size="1x" />
+        <font-awesome-icon
+          class="media-icon"
+          :icon="['fab', item.icon]"
+          size="1x"
+        />
         {{ item.title }}</a
       >
     </div>
@@ -23,8 +27,11 @@
 
 <script>
   const SpotifyPlayer = () =>
-    import(/* webpackChunkName: "Spotify Player" */ '../components/SpotifyPlayer');
-  const Loader = () => import(/* webpackChunkName: "Loader" */ '../components/Loader');
+    import(
+      /* webpackChunkName: "Spotify Player" */ '../components/SpotifyPlayer'
+    );
+  const Loader = () =>
+    import(/* webpackChunkName: "Loader" */ '../components/Loader');
 
   export default {
     name: 'SpotifyAndMedia',
