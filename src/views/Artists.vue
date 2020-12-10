@@ -5,7 +5,13 @@
       <div class="image-container">
         <router-link :to="{ name: 'Haxan' }">
           <figure>
-            <img src="../assets/artist-pictures/haxan-photo-min.jpg" alt="HAXAN Photo" />
+            <img
+              src="../assets/artist-pictures/haxan-photo-min.jpg"
+              alt="HAXAN Photo"
+              loading="lazy"
+              width="555px"
+              height="555px"
+            />
           </figure>
           <figcaption class="centered">HAXAN</figcaption>
         </router-link>
@@ -17,6 +23,9 @@
             <img
               src="../assets/artist-pictures/kora-winter-photo-min.jpg"
               alt="Kora Winter Photo"
+              loading="lazy"
+              width="555px"
+              height="555px"
             />
           </figure>
           <figcaption class="centered">KORA WINTER</figcaption>
@@ -72,6 +81,7 @@
   }
   img {
     width: 222px;
+    height: 222px;
     margin: 20px;
   }
   @media only screen and (min-width: 600px) {
@@ -83,6 +93,7 @@
     }
     img {
       width: 333px;
+      height: 333px;
     }
   }
   @media only screen and (min-width: 768px) {
@@ -91,6 +102,7 @@
     }
     img {
       width: 555px;
+      height: 555px;
     }
   }
 </style>
