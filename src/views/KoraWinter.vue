@@ -11,6 +11,12 @@
     />
 
     <SpotifyAndMedia
+      heading="Deine Freunde (kommen alle in die Hölle) | Kaputtmacher Session - 2020"
+      spotifyUrl="https://open.spotify.com/embed/album/2vcncyzUUF4TKj88Ynqqy0"
+      :linkCollection="linksDeineFreunde"
+    />
+
+    <SpotifyAndMedia
       heading="BITTER - 2020"
       spotifyUrl="https://open.spotify.com/embed/album/0rlhNo56LgYcBrHTvBrE4y"
       :linkCollection="linksBitter"
@@ -90,6 +96,42 @@
             iconSize: '3x',
           },
         ],
+        linksDeineFreunde: [
+          {
+            id: 1,
+            icon: 'spotify',
+            title: 'Spotify',
+            url: 'https://open.spotify.com/track/48uVDDUegkGGGO27T4crTL',
+          },
+          {
+            id: 2,
+            icon: 'bandcamp',
+            title: 'Bandcamp',
+            url:
+              'https://korawinter.bandcamp.com/track/deine-freunde-kommen-alle-in-die-h-lle-kaputtmacher-session',
+          },
+          {
+            id: 4,
+            icon: 'apple',
+            title: 'Apple Music',
+            url:
+              'https://music.apple.com/de/album/deine-freunde-kommen-alle-in-die-h%C3%B6lle-kaputtmacher/1501313479?i=1501313480&app=music',
+          },
+          {
+            id: 5,
+            icon: 'amazon',
+            title: 'Amazon Music',
+            url:
+              'https://music.amazon.de/albums/B085DYRF1V?trackAsin=B085DX3S5C',
+          },
+          {
+            id: 6,
+            icon: 'napster',
+            title: 'Napster',
+            url:
+              'https://napster.com/kora-winter/deine-freunde-kommen-alle-in-die-holle-kaputtmacher-session/deine-freunde-kommen-alle-in-die-holle-kaputtmacher-session',
+          },
+        ],
         linksBitter: [
           {
             id: 1,
@@ -126,12 +168,6 @@
             icon: 'napster',
             title: 'Napster',
             url: 'https://napster.com/kora-winter/bitter-single',
-          },
-          {
-            id: 7,
-            icon: 'google-play',
-            title: 'Google Play',
-            url: 'https://play.google.com/music/m/Bc2tjmecminjbj23vxh4pn5z77y',
           },
         ],
         linksWelk: [
@@ -172,12 +208,6 @@
             title: 'Napster',
             url: 'https://napster.com/kora-winter/welk',
           },
-          {
-            id: 15,
-            icon: 'google-play',
-            title: 'Google Play',
-            url: 'https://napster.com/kora-winter/welk',
-          },
         ],
         linksBlueht: [
           {
@@ -216,12 +246,6 @@
             icon: 'napster',
             title: 'Napster',
             url: 'https://napster.com/kora-winter/bluht',
-          },
-          {
-            id: 23,
-            icon: 'google-play',
-            title: 'Google Play',
-            url: 'https://play.google.com/music/m/Bvvt6tvo5zaopeaurftdycnahey',
           },
         ],
       };
