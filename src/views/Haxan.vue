@@ -3,11 +3,23 @@
     <h1>HAXAN</h1>
 
     <YouTubePlayer
-      url="//cdn.iframe.ly/DnNXwOE?playerjs=1&click_to_play=true&iframe=1"
+      url="//cdn.iframe.ly/Y4CcAWI?playerjs=1&click_to_play=true&iframe=1"
     />
 
     <SpotifyFollowButton
       url="https://open.spotify.com/follow/1/?uri=spotify:artist:5VARgwnLSbKfnZZvYFWTUu&size=detail&theme=dark"
+    />
+
+    <SpotifyAndMedia
+      heading="AMMONIAK - 2020"
+      spotifyUrl="https://open.spotify.com/embed/album/4btHiAXha6zMw2ZUbrQd79"
+      :linkCollection="linksAmmoniak"
+    />
+
+    <SpotifyAndMedia
+      heading="RAW/WAR (Instrumental) - 2020"
+      spotifyUrl="https://open.spotify.com/embed/album/0bKEX0OcWxW5fZGyG8jr0V"
+      :linkCollection="linksRawWar"
     />
 
     <SpotifyAndMedia
@@ -84,6 +96,55 @@
             iconSize: '3x',
           },
         ],
+        linksAmmoniak: [
+          {
+            id: 1,
+            icon: 'spotify',
+            title: 'Spotify',
+            url: 'https://open.spotify.com/track/4ECpNQptTCe2fbP37irash',
+          },
+          {
+            id: 2,
+            icon: 'apple',
+            title: 'Apple Music',
+            url:
+              'https://music.apple.com/de/album/ammoniak/1537954839?i=1537954840&app=music',
+          },
+          {
+            id: 3,
+            icon: 'amazon',
+            title: 'Amazon Music',
+            url:
+              'https://music.amazon.de/albums/B08MC9PLFN?trackAsin=B08MC7VN1Z',
+          },
+        ],
+        linksRawWar: [
+          {
+            id: 1,
+            icon: 'spotify',
+            title: 'Spotify',
+            url: 'https://open.spotify.com/album/0bKEX0OcWxW5fZGyG8jr0V',
+          },
+          {
+            id: 2,
+            icon: 'apple',
+            title: 'Apple Music',
+            url:
+              'https://music.apple.com/de/album/raw-war-instrumental/1534764783?app=music',
+          },
+          {
+            id: 3,
+            icon: 'amazon',
+            title: 'Amazon Music',
+            url: 'https://music.amazon.de/albums/B08KT1KT4M',
+          },
+          {
+            id: 4,
+            icon: 'napster',
+            title: 'Napster',
+            url: 'https://napster.com/haxan/raw-war-instrumental',
+          },
+        ],
         linksWar: [
           {
             id: 1,
@@ -120,12 +181,6 @@
             icon: 'napster',
             title: 'Napster',
             url: 'https://napster.com/haxan/war-444888155',
-          },
-          {
-            id: 7,
-            icon: 'google-play',
-            title: 'Google Play',
-            url: 'https://play.google.com/music/m/Bsjzakrbrog4kvzie6bmla7lyw4',
           },
         ],
         linksRaw: [
@@ -164,12 +219,6 @@
             icon: 'napster',
             title: 'Napster',
             url: 'https://napster.com/haxan/raw-396959642',
-          },
-          {
-            id: 15,
-            icon: 'google-play',
-            title: 'Google Play',
-            url: 'https://play.google.com/music/m/Bqajcn2hpbmpg5jqfbtqimv4tda',
           },
         ],
       };
