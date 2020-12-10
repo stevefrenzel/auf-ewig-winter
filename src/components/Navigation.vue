@@ -7,6 +7,7 @@
             id="horizontal-logo"
             src="../assets/logos/aew-logo-horizontal.png"
             alt="AUF EWIG WINTER Logo horizontal"
+            loading="lazy"
           /></figure
       ></router-link>
 
@@ -16,10 +17,10 @@
             <router-link :to="{ name: 'Artists' }">ARTISTS</router-link>
           </li>
           <li>
-            <a :href="shopLink" rel="noopener">SHOP</a>
+            <a :href="shopLink" rel="noopener noreferrer">SHOP</a>
           </li>
           <li>
-            <a :href="podcastLink" rel="noopener">PODCAST</a>
+            <a :href="podcastLink" rel="noopener noreferrer">PODCAST</a>
           </li>
           <li @click="toggleClass()">
             <router-link :to="{ name: 'Legal Notice' }"
