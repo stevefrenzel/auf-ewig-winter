@@ -7,7 +7,7 @@
     <section class="logo-container">
       <figure>
         <img
-          src="../assets/logos/aew-logo-horizontal.webp"
+          src="../assets/logos/aew-logo-horizontal.png"
           alt="AUF EWIG WINTER Logo Horizontal"
           loading="lazy"
         />
