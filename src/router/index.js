@@ -1,10 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Start from '../views/Start';
-import Artists from '../views/Artists';
-import Haxan from '../views/Haxan';
-import KoraWinter from '../views/KoraWinter';
-import LegalNotice from '../views/LegalNotice';
 
 Vue.use(VueRouter);
 
@@ -17,22 +13,25 @@ const routes = [
   {
     path: '/artists',
     name: 'Artists',
-    component: Artists,
+    component: () =>
+      import(/* webpackChunkName: "Artists" */ '../views/Artists'),
   },
   {
     path: '/haxan',
     name: 'Haxan',
-    component: Haxan,
+    component: () => import(/* webpackChunkName: "Haxan" */ '../views/Haxan'),
   },
   {
     path: '/kora-winter',
     name: 'Kora Winter',
-    component: KoraWinter,
+    component: () =>
+      import(/* webpackChunkName: "Kora Winter" */ '../views/KoraWinter'),
   },
   {
     path: '/legal-notice',
     name: 'Legal Notice',
-    component: LegalNotice,
+    component: () =>
+      import(/* webpackChunkName: "Legal Notice" */ '../views/LegalNotice'),
   },
 ];
 
