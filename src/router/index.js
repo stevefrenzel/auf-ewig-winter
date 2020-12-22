@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Start from '../views/Start';
+import Artists from '../views/Artists';
+import Haxan from '../views/Haxan';
+import KoraWinter from '../views/KoraWinter';
+import LegalNotice from '../views/LegalNotice';
 
 Vue.use(VueRouter);
 
@@ -13,24 +17,22 @@ const routes = [
   {
     path: '/artists',
     name: 'Artists',
-    component: () => import(/* webpackChunkName: "Artists" */ '../views/Artists'),
+    component: Artists,
   },
   {
-    // Make this one a nested route: artists/haxan
     path: '/haxan',
     name: 'Haxan',
-    component: () => import(/* webpackChunkName: "Haxan" */ '../views/Haxan'),
+    component: Haxan,
   },
   {
-    // Make this one a nested route: artists/kora-winter
     path: '/kora-winter',
     name: 'Kora Winter',
-    component: () => import(/* webpackChunkName: "Kora Winter" */ '../views/KoraWinter'),
+    component: KoraWinter,
   },
   {
     path: '/legal-notice',
     name: 'Legal Notice',
-    component: () => import(/* webpackChunkName: "Legal Notice" */ '../views/LegalNotice'),
+    component: LegalNotice,
   },
 ];
 
