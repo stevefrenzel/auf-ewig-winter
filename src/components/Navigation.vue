@@ -5,7 +5,7 @@
         ><figure>
           <img
             id="horizontal-logo"
-            src="../assets/logos/aew-logo-horizontal.webp"
+            src="../assets/logos/aew-logo-horizontal.png"
             alt="AUF EWIG WINTER Logo horizontal"
             loading="lazy"
           /></figure
