@@ -16,7 +16,11 @@
 
     <section class="social-media-container">
       <span v-for="item in socialMedia" :key="item.id">
-        <a class="social-media-link" :href="item.url" rel="noopener noreferrer"
+        <a
+          class="social-media-link"
+          :href="item.url"
+          rel="noopener noreferrer"
+          :aria-label="item.description"
           ><font-awesome-icon
             class="social-media-icon"
             :icon="[item.iconType, item.icon]"
@@ -39,6 +43,7 @@
             icon: 'shopping-cart',
             iconType: 'fas',
             iconSize: '2x',
+            description: 'AUF EWIG WINTER Shop',
           },
           {
             id: 2,
@@ -46,6 +51,7 @@
             icon: 'instagram',
             iconType: 'fab',
             iconSize: '3x',
+            description: 'AUF EWIG WINTER Instagram',
           },
           {
             id: 3,
@@ -53,6 +59,7 @@
             icon: 'facebook',
             iconType: 'fab',
             iconSize: '3x',
+            description: 'AUF EWIG WINTER Facebook',
           },
           {
             id: 4,
@@ -60,6 +67,7 @@
             icon: 'youtube-square',
             iconType: 'fab',
             iconSize: '3x',
+            description: 'AUF EWIG WINTER YouTube',
           },
         ],
       };
