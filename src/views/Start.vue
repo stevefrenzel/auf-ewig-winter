@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <main class="container">
     <video autoplay muted loop id="video">
       <source src="../assets/dust.mp4" type="video/mp4" />
     </video>
 
-    <div class="logo-container">
+    <section class="logo-container">
       <figure>
         <img
           src="../assets/logos/aew-logo-horizontal.png"
@@ -12,9 +12,9 @@
           loading="lazy"
         />
       </figure>
-    </div>
+    </section>
 
-    <div class="social-media-container">
+    <section class="social-media-container">
       <span v-for="item in socialMedia" :key="item.id">
         <a class="social-media-link" :href="item.url" rel="noopener noreferrer"
           ><font-awesome-icon
@@ -23,8 +23,8 @@
             :size="item.iconSize"
         /></a>
       </span>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div role="button" tabindex="0" aria-pressed="false">
     <iframe
       class="follow-button"
       :src="url"

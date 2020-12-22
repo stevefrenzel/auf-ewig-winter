@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <main class="container">
     <h1>ARTISTS</h1>
-    <div class="artist-gallery">
-      <div class="image-container">
+    <section class="artist-gallery">
+      <article class="image-container">
         <router-link :to="{ name: 'Haxan' }">
           <figure>
             <img
@@ -15,9 +15,9 @@
           </figure>
           <figcaption class="centered">HAXAN</figcaption>
         </router-link>
-      </div>
+      </article>
 
-      <div class="image-container">
+      <article class="image-container">
         <router-link :to="{ name: 'Kora Winter' }">
           <figure>
             <img
@@ -30,9 +30,9 @@
           </figure>
           <figcaption class="centered">KORA WINTER</figcaption>
         </router-link>
-      </div>
-    </div>
-  </div>
+      </article>
+    </section>
+  </main>
 </template>
 
 <script>

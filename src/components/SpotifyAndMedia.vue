@@ -1,5 +1,5 @@
 <template>
-  <div class="container-releases">
+  <section class="container-releases">
     <h2>{{ heading }}</h2>
 
     <Loader class="loader" />
@@ -22,7 +22,7 @@
         {{ item.title }}</a
       >
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

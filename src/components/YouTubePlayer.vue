@@ -1,5 +1,5 @@
 <template>
-  <div class="youtube-player-container">
+  <section class="youtube-player-container">
     <iframe
       class="youtube-player"
       :src="url"
@@ -7,7 +7,7 @@
       allowfullscreen
       scrolling="no"
     ></iframe>
-  </div>
+  </section>
 </template>
 
 <script>

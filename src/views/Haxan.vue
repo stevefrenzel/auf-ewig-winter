@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="container">
     <h1>HAXAN</h1>
 
     <YouTubePlayer
@@ -44,7 +44,7 @@
         /></a>
       </span>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

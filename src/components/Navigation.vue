@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <header>
     <nav id="navbar">
       <router-link :to="{ name: 'Start' }"
         ><figure>
@@ -49,7 +49,7 @@
     <transition name="fade">
       <router-view />
     </transition>
-  </div>
+  </header>
 </template>
 
 <script>

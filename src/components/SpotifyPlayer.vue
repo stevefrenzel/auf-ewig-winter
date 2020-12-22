@@ -1,7 +1,12 @@
 <template>
-  <div>
-    <iframe class="spotify-player" :src="url" frameborder="0" allowtransparency="true"></iframe>
-  </div>
+  <section>
+    <iframe
+      class="spotify-player"
+      :src="url"
+      frameborder="0"
+      allowtransparency="true"
+    ></iframe>
+  </section>
 </template>
 
 <script>

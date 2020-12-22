@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="container">
     <h1>LEGAL NOTICE</h1>
     <br />
     <h2>{{ headingOne }}</h2>
@@ -23,7 +23,7 @@
     <p>{{ paragraphSix }}</p>
     <br />
     <p class="padding-bottom">{{ paragraphSeven }}</p>
-  </div>
+  </main>
 </template>
 
 <script>
