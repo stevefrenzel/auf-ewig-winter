@@ -1,11 +1,11 @@
 <template>
-  <header>
+  <div>
     <nav id="navbar">
       <router-link :to="{ name: 'Start' }"
         ><figure>
           <img
             id="horizontal-logo"
-            src="../assets/logos/aew-logo-horizontal.png"
+            src="../assets/logos/aew-logo-horizontal.webp"
             alt="AUF EWIG WINTER Logo horizontal"
             loading="lazy"
           /></figure
@@ -49,7 +49,7 @@
     <transition name="fade">
       <router-view />
     </transition>
-  </header>
+  </div>
 </template>
 
 <script>
