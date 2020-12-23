@@ -235,7 +235,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/backgrounds/haxan-background-min.jpg');
+    background-image: url('../assets/backgrounds/haxan-ammoniak-min.jpg');
     background-size: 500px;
     background-attachment: fixed;
     background-blend-mode: darken;
