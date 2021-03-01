@@ -6,8 +6,3 @@ publish = "dist"
   from = "/*"
   to = "/index.html"
   status = 200
-
-  [[redirects]]
-  from = "/shop"
-  to = "https://aufewigwinter.bandcamp.com/"
-  status = 200
