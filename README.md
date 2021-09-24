@@ -9,7 +9,8 @@
 
 - Show all three artists with picture (HAXAN, Kora Winter, Nola The Galgo)
 - Selecting an artist will direct to respective page
-- Artist page: Video, music and social available
+- Artist profile: Video, music and social available
+- Artist profile: Add spinner while iframe is loading
 
 ## 3. Shop
 

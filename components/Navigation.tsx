@@ -1,7 +1,23 @@
 const Navigation = () => {
   return (
     <nav>
-      <h1>Navigation</h1>
+      <ul>
+        <li>
+          <a href="#start">Start</a>
+        </li>
+        <li>
+          <a href="#artists">Artists</a>
+        </li>
+        <li>
+          <a href="#shop">Shop</a>
+        </li>
+        <li>
+          <a href="#podcast">Podcast</a>
+        </li>
+        <li>
+          <a href="#legal-notice">Legal notice</a>
+        </li>
+      </ul>
     </nav>
   );
 };

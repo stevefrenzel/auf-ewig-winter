@@ -1,6 +1,6 @@
 import Navigation from '@components/Navigation';
 import Start from '@components/Start';
-import Artists from '@components/Artists';
+import ArtistsOverview from '@components/ArtistsOverview';
 import Shop from '@components/Shop';
 import Podcast from '@components/Podcast';
 import LegalNotice from '@components/LegalNotice';
@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Navigation />
       <Start />
-      <Artists />
+      <ArtistsOverview />
       <Shop />
       <Podcast />
       <LegalNotice />
