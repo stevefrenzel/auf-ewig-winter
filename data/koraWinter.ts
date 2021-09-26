@@ -46,30 +46,38 @@ const videos = [
 const music = [
   {
     title: 'Hetzjagd by Kora Winter',
+    description: 'Hetzjagd - 2021',
     src: 'https://open.spotify.com/embed/album/0zKpPmDf6ed9AdxcoZ9fzo',
   },
   {
     title: 'Deine Freunde (kommen alle in die Hölle) by Kora Winter',
+    description:
+      'Deine Freunde (kommen alle in die Hölle) | Kaputtmacher Session (Single) - 2020',
     src: 'https://open.spotify.com/embed/album/3pQit3xV9z0rNM0j8QAjYv',
   },
   {
     title: 'Bitter (Album) by Kora Winter',
+    description: 'BITTER (Album) - 2019',
     src: 'https://open.spotify.com/embed/album/0PouSjyX13SbnU4xpWYVu3',
   },
   {
     title: 'Bitter (Single) by Kora Winter',
+    description: 'Bitter (Single) - 2019',
     src: 'https://open.spotify.com/embed/album/6XeMpAUovmYYrdnudrtsTg',
   },
   {
     title: 'Eifer (Single) by Kora Winter',
+    description: 'Eifer (Single) - 2019',
     src: 'https://open.spotify.com/embed/album/6burCGxXk0YT0rX7Io9qe1',
   },
   {
     title: 'Welk by Kora Winter',
+    description: 'Welk (EP) - 2017',
     src: 'https://open.spotify.com/embed/album/2CzpbB0XxwU2vcCQPXf3hD',
   },
   {
     title: 'Blüht by Kora Winter',
+    description: 'Blüht (EP) - 2015',
     src: 'https://open.spotify.com/embed/album/1LQD79eFhEdOqpwTfJ2OTB',
   },
 ];

@@ -29,56 +29,58 @@ const ArtistProfile: NextPage<Props> = ({
 }) => {
   return (
     <div id="artist-profile">
-      <Link href="/">
-        <a>GO BACK</a>
-      </Link>
-      <h1>{artistName}</h1>
-      <Image src={artistPicture} alt={artistName} layout="intrinsic" />
-      <br />
-      <iframe
-        src={spotifyFollowUrl}
-        width="100%"
-        height="56"
-        scrolling="no"
-        frameBorder="0"
-      ></iframe>
-      <h2>Videos</h2>
-      {videoData &&
-        videoData.map((data) => (
+      <div className="inner-wrapper">
+        <Link href="/" scroll={false}>
+          <a>GO BACK</a>
+        </Link>
+        <div className="image-text-container">
+          <Image src={artistPicture} alt={artistName} layout="intrinsic" />
+          <h1>{artistName}</h1>
+        </div>
+        <iframe
+          src={spotifyFollowUrl}
+          width="100%"
+          height="56"
+          scrolling="no"
+          frameBorder="0"
+        ></iframe>
+        <h2>Videos</h2>
+        {videoData &&
+          videoData.map((data) => (
+            <article key={data.title}>
+              <div className="video-wrapper">
+                <iframe
+                  className="iframe-youtube"
+                  src={data.src}
+                  title={data.title}
+                  allow="fullscreen"
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <p>{data.description}</p>
+            </article>
+          ))}
+        <h2>Music</h2>
+        {musicData.map((data) => (
           <article key={data.title}>
             <iframe
+              className="iframe-spotify"
               src={data.src}
               title={data.title}
-              allow="fullscreen"
               loading="lazy"
-              frameBorder="0"
             ></iframe>
             <p>{data.description}</p>
-            <br />
           </article>
         ))}
-      <h2>Music</h2>
-      {musicData.map((data) => (
-        <article key={data.title}>
-          <iframe
-            src={data.src}
-            title={data.title}
-            loading="lazy"
-            width="100%"
-            height="80"
-            frameBorder="0"
-          ></iframe>
-          <br />
-        </article>
-      ))}
-      <h2>Social</h2>
-      {socialData &&
-        socialData.map((data) => (
-          <article key={data.title}>
-            <a href={data.src}>{data.title}</a>
-            <br />
-          </article>
-        ))}
+        <h2>Social</h2>
+        {socialData &&
+          socialData.map((data) => (
+            <article key={data.title}>
+              <a href={data.src}>{data.title}</a>
+              <br />
+            </article>
+          ))}
+      </div>
     </div>
   );
 };

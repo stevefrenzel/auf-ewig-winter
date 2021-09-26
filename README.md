@@ -3,6 +3,7 @@
 ## General
 
 - Use as much lazy loading as possible and optimize performance
+- Add icons for Instagram, Facebook, YouTube, TikTok
 
 ## 1. Start
 

@@ -1,6 +1,14 @@
 #start-container {
-  background: lightblue;
-  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 0 10%;
   height: 100vh;
-  scroll-snap-align: end;
+
+  figure {
+    margin-top: 2em;
+  }
+
+  p {
+    text-align: right;
+  }
 }
