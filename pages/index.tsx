@@ -3,17 +3,19 @@ import Start from '@components/Start';
 import ArtistsOverview from '@components/ArtistsOverview';
 import Shop from '@components/Shop';
 import Podcast from '@components/Podcast';
-import LegalNotice from '@components/LegalNotice';
+// import LegalNotice from '@components/LegalNotice';
 
 const Home = () => {
   return (
     <>
-      <Navigation />
-      <Start />
-      <ArtistsOverview />
-      <Shop />
-      <Podcast />
-      <LegalNotice />
+      {/* <Navigation /> */}
+      <div id="scroll-snap">
+        <Start />
+        <ArtistsOverview />
+        <Shop />
+        <Podcast />
+        {/* <LegalNotice /> */}
+      </div>
     </>
   );
 };

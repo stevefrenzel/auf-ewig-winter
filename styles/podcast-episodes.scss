@@ -1,14 +1,15 @@
 #podcast-episodes {
-  padding: 0 5%;
+  padding: 0 10%;
 
   h1 {
     text-align: center;
-    margin: 1.5em 0;
+    margin: 1em 0;
   }
+
   iframe {
-    margin-bottom: 1.5em;
     width: 100%;
     height: 232px;
     border: none;
+    margin-bottom: 1em;
   }
 }
