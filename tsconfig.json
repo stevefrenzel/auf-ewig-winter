@@ -5,6 +5,7 @@
       "@components/*": ["components/*"],
       "@data/*": ["data/*"],
       "@images/*": ["public/images/*"],
+      "@videos/*": ["public/videos/*"],
       "@styles/*": ["styles/*"],
     },
     "target": "es5",

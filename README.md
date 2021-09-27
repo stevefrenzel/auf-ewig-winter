@@ -7,11 +7,12 @@
 
 ## 1. Start
 
-- Show logo and short description
+- Show logo and short description √
 - Show latest video, music and shop item
 
 ## 2. Artists
 
+- Header is waiting here and will be sticky: https://www.w3schools.com/howto/howto_js_sticky_header.asp
 - Show all three artists with picture (HAXAN, Kora Winter, Nola The Galgo)
 - Selecting an artist will direct to respective page √
 - Artist profile: Video, music and social available √

@@ -1,5 +1,5 @@
 import Navigation from '@components/Navigation';
-import Start from '@components/Start';
+import Intro from '@components/Intro';
 import ArtistsOverview from '@components/ArtistsOverview';
 import Shop from '@components/Shop';
 import Podcast from '@components/Podcast';
@@ -10,7 +10,7 @@ const Home = () => {
     <>
       {/* <Navigation /> */}
       <div id="scroll-snap">
-        <Start />
+        <Intro />
         <ArtistsOverview />
         <Shop />
         <Podcast />

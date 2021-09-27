@@ -8,53 +8,23 @@ import nolaTheGalgo from '@images/nola-the-galgo.jpg';
 const Artists = () => {
   return (
     <section id="artists-overview-container">
+      <h2>Artists</h2>
       <div className="inner-wrapper">
-        <h2>Artists</h2>
-        <div className="reel">
+        <div className="grid-container">
           {artistData.map((data) => (
-            <>
-              <figure>
+            <Link href={data.link} key={data.link} passHref>
+              <div className="image-text-container">
                 <Image
                   src={data.image}
                   alt={data.alt}
-                  width="400"
-                  height="400"
+                  width="300"
+                  height="300"
                 />
-              </figure>
-              <Link href={data.link}>
-                <a>{data.name}</a>
-              </Link>
-            </>
-          ))}
-          {/* <figure>
-            <Image src={haxan} alt="" width="400" height="400" />
-          </figure>
-          <figure>
-            <Image src={koraWinter} alt="" width="400" height="400" />
-          </figure>
-          <figure>
-            <Image src={nolaTheGalgo} alt="" width="400" height="400" />
-          </figure> */}
-        </div>
-
-        {/* {artistData.map((data) => (
-          <div key={data.name}>
-            <h3>{data.name}</h3>
-            <Image
-            src={data.image}
-            alt={data.alt}
-            width="300"
-            height="300"
-            placeholder="blur"
-            // Adjust color according to final design:
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-          />
-            <br />
-            <Link href={data.link}>
-              <a>{data.name}</a>
+                <p>{data.name}</p>
+              </div>
             </Link>
-          </div>
-        ))} */}
+          ))}
+        </div>
       </div>
     </section>
   );
