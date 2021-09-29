@@ -1,9 +1,13 @@
-import Navigation from '@components/Navigation';
-import Intro from '@components/Intro';
-import ArtistsOverview from '@components/ArtistsOverview';
-import Shop from '@components/Shop';
-import Podcast from '@components/Podcast';
-// import LegalNotice from '@components/LegalNotice';
+import dynamic from 'next/dynamic';
+
+const Navigation = dynamic(() => import('@components/Navigation'));
+const Intro = dynamic(() => import('@components/Intro'));
+const LatestRelease = dynamic(() => import('@components/LatestRelease'));
+const ArtistsOverview = dynamic(() => import('@components/ArtistsOverview'));
+const Shop = dynamic(() => import('@components/Shop'));
+const Podcast = dynamic(() => import('@components/Podcast'));
+const Newsletter = dynamic(() => import('@components/Newsletter'));
+const Footer = dynamic(() => import('@components/Footer'));
 
 const Home = () => {
   return (
@@ -11,10 +15,12 @@ const Home = () => {
       <Navigation />
       <Intro />
       <main id="main">
+        <LatestRelease />
         <ArtistsOverview />
         <Shop />
         <Podcast />
-        {/* <LegalNotice /> */}
+        <Newsletter />
+        <Footer />
       </main>
     </>
   );

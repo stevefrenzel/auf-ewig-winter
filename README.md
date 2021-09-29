@@ -15,7 +15,7 @@
 
 - [Sticky header](https://www.w3schools.com/howto/howto_js_sticky_header.asp)
 - Show latest video, music, shop item and artist name
-- Background color according to cover artwork, borders are slightly tilted
+- Background color according to cover artwork, borders are faded √
 
 ## 3. Artists
 

@@ -1,12 +1,13 @@
 import '@styles/globals.scss';
 import '@styles/reset.css';
-import '@styles/navigation.scss';
-import '@styles/intro.scss';
-import '@styles/artists-overview.scss';
-import '@styles/shop.scss';
-import '@styles/podcast.scss';
 import '@styles/podcast-episodes.scss';
-import '@styles/artist-profile.scss';
+import '@components/Navigation/navigation.scss';
+import '@components/Intro/intro.scss';
+import '@components/LatestRelease/latest-release.scss';
+import '@components/ArtistsOverview/artists-overview.scss';
+import '@components/ArtistProfile/artist-profile.scss';
+import '@components/Shop/shop.scss';
+import '@components/Podcast/podcast.scss';
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {

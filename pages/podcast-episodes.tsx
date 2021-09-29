@@ -4,7 +4,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import episodeData from '@data/podcastEpisodes';
 
-const Iframe = dynamic(() => import('@components/Iframe'), {
+const Iframe = dynamic(() => import('@utils/Iframe'), {
   loading: () => <h1>L O A D I N G</h1>,
 });
 

@@ -3,6 +3,7 @@
     "baseUrl": "./",
     "paths": {
       "@components/*": ["components/*"],
+      "@utils/*": ["components/utils/*"],
       "@data/*": ["data/*"],
       "@images/*": ["public/images/*"],
       "@videos/*": ["public/videos/*"],
@@ -22,6 +23,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/ArtistsOverview"],
   "exclude": ["node_modules"]
 }
