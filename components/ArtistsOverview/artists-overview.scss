@@ -1,0 +1,38 @@
+#artists-overview-container {
+  background: linear-gradient(0deg, black 60%, rgb(144, 0, 0));
+
+  .grid {
+    padding: 0 10%;
+    display: grid;
+    grid-gap: 1rem;
+    padding-bottom: 8em;
+    justify-items: center;
+
+    .image-text-container {
+      position: relative;
+      &:hover {
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  @supports (width: min(250px, 100%)) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    }
+  }
+
+  h2 {
+    font-size: 2em;
+    padding: 2em 0;
+    text-align: center;
+  }
+}
