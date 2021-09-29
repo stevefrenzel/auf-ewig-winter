@@ -34,22 +34,27 @@ const videos = [
 const music = [
   {
     title: 'Stress by Haxan',
+    description: 'STRE$$ (Single) - 2021',
     src: 'https://open.spotify.com/embed/album/6frDw8h5iBVrSav9gln8KN',
   },
   {
     title: 'Ammoniak by Haxan',
+    description: 'Ammoniak (Single) - 2021',
     src: 'https://open.spotify.com/embed/album/4btHiAXha6zMw2ZUbrQd79',
   },
   {
     title: 'Raw & War Instrumental by Haxan',
+    description: 'RAW/WAR Instrumental (Album) - 2020',
     src: 'https://open.spotify.com/embed/album/0bKEX0OcWxW5fZGyG8jr0V',
   },
   {
     title: 'War by Haxan',
+    description: 'WAR (EP) - 2020',
     src: 'https://open.spotify.com/embed/album/6ziQUTTFQJsBvFMikOiV0t',
   },
   {
     title: 'Raw by Haxan',
+    description: 'RAW (EP) - 2020',
     src: 'https://open.spotify.com/embed/album/6OEiUjGTm9QuFPReOspC5b',
   },
 ];

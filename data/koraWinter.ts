@@ -46,7 +46,7 @@ const videos = [
 const music = [
   {
     title: 'Hetzjagd by Kora Winter',
-    description: 'Hetzjagd - 2021',
+    description: 'Hetzjagd (Single) - 2021',
     src: 'https://open.spotify.com/embed/album/0zKpPmDf6ed9AdxcoZ9fzo',
   },
   {

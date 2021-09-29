@@ -1,5 +1,12 @@
+// TODO: Click component to load it or making lazy loading work
+
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import episodeData from '@data/podcastEpisodes';
+
+const Iframe = dynamic(() => import('@components/Iframe'), {
+  loading: () => <h1>L O A D I N G</h1>,
+});
 
 const PodcastEpisodes = () => {
   return (
@@ -8,13 +15,8 @@ const PodcastEpisodes = () => {
         <a>GO BACK</a>
       </Link>
       <h1>Podcast Episodes</h1>
-      {episodeData.map((data) => (
-        <iframe
-          key={data.src}
-          title={data.title}
-          src={data.src}
-          loading="lazy"
-        ></iframe>
+      {episodeData.map((data, index) => (
+        <Iframe key={index} title={data.title} src={data.src}></Iframe>
       ))}
     </div>
   );

@@ -8,14 +8,14 @@ import Podcast from '@components/Podcast';
 const Home = () => {
   return (
     <>
-      {/* <Navigation /> */}
-      <div id="scroll-snap">
-        <Intro />
+      <Navigation />
+      <Intro />
+      <main id="main">
         <ArtistsOverview />
         <Shop />
         <Podcast />
         {/* <LegalNotice /> */}
-      </div>
+      </main>
     </>
   );
 };

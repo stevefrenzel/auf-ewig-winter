@@ -3,20 +3,20 @@ const Navigation = () => {
     <nav>
       <ul>
         <li>
-          <a href="#start">Start</a>
+          <a href="#intro-container">Start</a>
         </li>
         <li>
-          <a href="#artists">Artists</a>
+          <a href="#artists-overview-container">Artists</a>
         </li>
         <li>
-          <a href="#shop">Shop</a>
+          <a href="#shop-container">Shop</a>
         </li>
         <li>
-          <a href="#podcast">Podcast</a>
+          <a href="#podcast-container">Podcast</a>
         </li>
-        <li>
+        {/* <li>
           <a href="#legal-notice">Legal notice</a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

@@ -1,5 +1,6 @@
 import '@styles/globals.scss';
 import '@styles/reset.css';
+import '@styles/navigation.scss';
 import '@styles/intro.scss';
 import '@styles/artists-overview.scss';
 import '@styles/shop.scss';

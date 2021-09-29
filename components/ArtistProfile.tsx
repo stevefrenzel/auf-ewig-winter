@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { NextPage } from 'next';
+import Iframe from '@components/Iframe';
 
 interface DataProps {
   title: string;
