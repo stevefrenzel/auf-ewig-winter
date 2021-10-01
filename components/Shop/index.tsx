@@ -4,31 +4,42 @@ import { merch, music } from '@data/shop';
 const Shop = () => {
   return (
     <section id="shop-container">
-      <h1>Shop</h1>
-      <h2>Merch</h2>
-      {merch.map((data, index) => (
-        <div key={index}>
-          <Image
-            src={data.image}
-            alt={data.description}
-            width={300}
-            height={300}
-          />
-          <p>{data.description}</p>
+      <div className="inner-wrapper">
+        <h2>Shop</h2>
+        <h3>Merch</h3>
+        <div className="reel">
+          {merch.map((data, index) => (
+            <article className="image-and-text" key={index}>
+              <a href={data.url} rel="noopener noreferrer">
+                <Image
+                  src={data.image}
+                  alt={data.description}
+                  width={300}
+                  height={300}
+                />
+                <p>{data.description}</p>
+              </a>
+            </article>
+          ))}
         </div>
-      ))}
-      <h2>Music</h2>
-      {music.map((data, index) => (
-        <div key={index}>
-          <Image
-            src={data.image}
-            alt={data.description}
-            width={300}
-            height={300}
-          />
-          <p>{data.description}</p>
+        <br />
+        <h3>Music</h3>
+        <div className="reel">
+          {music.map((data, index) => (
+            <article className="image-and-text" key={index}>
+              <a href={data.url} rel="noopener noreferrer">
+                <Image
+                  src={data.image}
+                  alt={data.description}
+                  width={300}
+                  height={300}
+                />
+                <p>{data.description}</p>
+              </a>
+            </article>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 };

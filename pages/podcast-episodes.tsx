@@ -11,13 +11,15 @@ const Iframe = dynamic(() => import('@utils/Iframe'), {
 const PodcastEpisodes = () => {
   return (
     <div id="podcast-episodes">
-      <Link href="/">
-        <a>GO BACK</a>
-      </Link>
-      <h1>Podcast Episodes</h1>
-      {episodeData.map((data, index) => (
-        <Iframe key={index} title={data.title} src={data.src}></Iframe>
-      ))}
+      <div className="inner-wrapper">
+        <Link href="/">
+          <a>GO BACK</a>
+        </Link>
+        <h1>Podcast Episodes</h1>
+        {episodeData.map((data, index) => (
+          <Iframe key={index} title={data.title} src={data.src}></Iframe>
+        ))}
+      </div>
     </div>
   );
 };

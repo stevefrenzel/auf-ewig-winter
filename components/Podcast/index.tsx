@@ -4,7 +4,7 @@ const Podcast = () => {
   return (
     <section id="podcast-container">
       <div className="inner-wrapper">
-        <h1>Podcast</h1>
+        <h2>Podcast</h2>
         <iframe
           src="https://open.spotify.com/embed/show/6P3GrTJDW22sxod54f1kRs?theme=0"
           loading="lazy"

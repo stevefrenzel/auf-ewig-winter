@@ -9,6 +9,7 @@
 ## 1. Intro
 
 - Show logo and short description √
+- Use SVG instead of PNG
 - Add video background
 
 ## 2. Latest release

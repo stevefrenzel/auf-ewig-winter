@@ -1,16 +1,14 @@
 #podcast-container {
   // background: lightseagreen;
-  width: 100%;
-  height: 100vh;
-  padding: 0 10%;
+  padding: 2em 10% 4em 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  h1 {
-    font-size: 2em;
-    margin-bottom: 1em;
+  h2 {
+    font-size: 3em;
+    padding-bottom: 1em;
     text-align: center;
   }
 
@@ -23,5 +21,16 @@
 
   p {
     margin-bottom: 1em;
+  }
+
+  a {
+    background: #000;
+    color: #fff;
+    transition: 0.3s ease;
+
+    &:hover,
+    &:focus {
+      filter: invert(1);
+    }
   }
 }
