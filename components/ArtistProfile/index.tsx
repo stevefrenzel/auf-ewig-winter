@@ -1,5 +1,6 @@
 // TODO: Improve user experience by indicating content is being loaded
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NextPage } from 'next';
@@ -45,6 +46,7 @@ const ArtistProfile: NextPage<Props> = ({
           scrolling="no"
           frameBorder="0"
         ></iframe>
+
         <h2>Videos</h2>
         {videoData &&
           videoData.map((data) => (

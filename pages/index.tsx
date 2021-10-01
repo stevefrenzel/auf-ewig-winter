@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
 
-const Navigation = dynamic(() => import('@components/Navigation'));
-const Intro = dynamic(() => import('@components/Intro'));
-const LatestRelease = dynamic(() => import('@components/LatestRelease'));
+import Navigation from '@components/Navigation';
+import Intro from '@components/Intro';
+import LatestRelease from '@components/LatestRelease';
 const ArtistsOverview = dynamic(() => import('@components/ArtistsOverview'));
 const Shop = dynamic(() => import('@components/Shop'));
 const Podcast = dynamic(() => import('@components/Podcast'));
