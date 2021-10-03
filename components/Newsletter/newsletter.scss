@@ -1,9 +1,53 @@
 #newsletter-container {
-  background: red;
+  // background: lightblue;
   padding: 2em 10% 4em 10%;
+
   h2 {
     font-size: 3em;
     padding-bottom: 1em;
     text-align: center;
+  }
+
+  form {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    label {
+      display: none;
+    }
+
+    input[type='email'] {
+      flex: 3;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      flex: 1;
+      width: 100%;
+      margin-left: 1em;
+      background: red;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+
+      &:hover,
+      &:focus {
+        background: #fff;
+        color: red;
+      }
+    }
+  }
+
+  span[role='alert'] {
+    background: yellow;
+    color: #000;
+    padding: 1%;
+    border-radius: 5px;
   }
 }

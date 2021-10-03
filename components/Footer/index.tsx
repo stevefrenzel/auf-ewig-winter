@@ -1,20 +1,45 @@
-interface Props {}
+// TODO: Fix CSS issues
 
-const Footer = (props: Props) => {
+import Image from 'next/image';
+import instagram from '@images/logos/instagram.svg';
+import youtube from '@images/logos/youtube.svg';
+import facebook from '@images/logos/facebook.svg';
+import email from '@images/logos/email.svg';
+
+const Footer = () => {
   return (
     <footer>
       <ul>
         <li>
-          <a href="">Instagram</a>
+          <Image src={instagram} alt="" />
+          <a
+            href="https://www.instagram.com/aufewigwinter/"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
         </li>
         <li>
-          <a href="">YouTube</a>
+          <Image src={youtube} alt="" />
+          <a
+            href="https://www.youtube.com/channel/UC_PWRVbYIbazxwLfLJsLTFA"
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
         </li>
         <li>
-          <a href="">Facebook</a>
+          <Image src={facebook} alt="" />
+          <a
+            href="https://www.facebook.com/aufewigwinter"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
         </li>
         <li>
-          <a href="">E-Mail</a>
+          <Image src={email} alt="" />
+          <a href="mailto: info@aufewigwinter.de">E-Mail</a>
         </li>
       </ul>
     </footer>

@@ -9,6 +9,7 @@ import '@components/ArtistProfile/artist-profile.scss';
 import '@components/Shop/shop.scss';
 import '@components/Podcast/podcast.scss';
 import '@components/Newsletter/newsletter.scss';
+import '@components/Footer/footer.scss';
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
