@@ -1,0 +1,32 @@
+footer {
+  padding: 1em 0;
+
+  a {
+    background: #000;
+    color: #fff;
+    transition: 0.3s ease;
+    margin-left: 0.5em;
+
+    &:hover,
+    &:focus {
+      background: #fff;
+      color: #000;
+      border-radius: 5px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
