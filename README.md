@@ -3,7 +3,7 @@
 ## General
 
 - Use as much lazy loading as possible and optimize performance
-- Add icons for Instagram, Facebook, YouTube, TikTok
+- Add icons for Instagram, Facebook, YouTube, TikTok √
 - Use [GSAP](https://greensock.com/gsap/) for animations
 
 ## 1. Intro
@@ -21,6 +21,7 @@
 ## 3. Artists
 
 - Show all three artists with picture (HAXAN, Kora Winter, Nola The Galgo)
+- Display with rectangular shaped pictures stacked
 - Selecting an artist will direct to respective page √
 - Add special artist navigation
 
@@ -34,7 +35,7 @@
 
 ## 4. Shop
 
-- Display shop items via Bandcamp API
+- Display shop items via Bandcamp API √
 
 ## 5. Podcast
 
@@ -43,9 +44,10 @@
 
 ## 6. Newsletter
 
+- Fix CSS issues
 - Use [Buttondown](https://buttondown.email/)
-- E-Mail input field
-- Submit button
+- E-Mail input field √
+- Submit button √
 - Short description
 
 ## 6. Legal notice
@@ -55,8 +57,9 @@
 
 ## 7. Footer
 
+- Fix CSS issues
 - Copyright
-- Instagram
-- YouTube
-- Facebook
-- E-Mail
+- Instagram √
+- YouTube √
+- Facebook √
+- E-Mail √
