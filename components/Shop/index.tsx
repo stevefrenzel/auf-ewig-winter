@@ -14,8 +14,10 @@ const Shop = () => {
                 <Image
                   src={data.image}
                   alt={data.description}
-                  width={300}
-                  height={300}
+                  width={400}
+                  height={400}
+                  placeholder="blur"
+                  blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
                 />
                 <p>{data.description}</p>
               </a>
@@ -31,8 +33,8 @@ const Shop = () => {
                 <Image
                   src={data.image}
                   alt={data.description}
-                  width={300}
-                  height={300}
+                  width={400}
+                  height={400}
                 />
                 <p>{data.description}</p>
               </a>
