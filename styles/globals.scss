@@ -7,6 +7,10 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
+:root {
+  --spotlight-color: rgb(201, 202, 204);
+}
+
 html {
   background: #000;
   color: #fff;

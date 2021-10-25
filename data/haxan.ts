@@ -1,3 +1,7 @@
+import instagram from '@images/logos/instagram.svg';
+import tiktok from '@images/logos/tiktok.svg';
+import facebook from '@images/logos/facebook.svg';
+
 const videos = [
   {
     title: 'Stress by Haxan',
@@ -60,9 +64,17 @@ const music = [
 ];
 
 const social = [
-  { title: 'Instagram', src: 'https://www.instagram.com/haxan030/' },
-  { title: 'TikTok', src: 'https://www.tiktok.com/@haxan030?' },
-  { title: 'Facebook', src: 'https://www.facebook.com/HAXAN030/' },
+  {
+    title: 'Instagram',
+    src: 'https://www.instagram.com/haxan030/',
+    icon: instagram,
+  },
+  { title: 'TikTok', src: 'https://www.tiktok.com/@haxan030?', icon: tiktok },
+  {
+    title: 'Facebook',
+    src: 'https://www.facebook.com/HAXAN030/',
+    icon: facebook,
+  },
 ];
 
 export { videos, music, social };

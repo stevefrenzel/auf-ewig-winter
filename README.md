@@ -5,6 +5,7 @@
 - Use as much lazy loading as possible and optimize performance
 - Add icons for Instagram, Facebook, YouTube, TikTok √
 - Use [GSAP](https://greensock.com/gsap/) for animations
+- Enable flexible SVG color
 
 ## 1. Intro
 
@@ -12,10 +13,10 @@
 - Use SVG instead of PNG
 - Add video background
 
-## 2. Latest release
+## 2. Spotlight
 
 - [Sticky header](https://www.w3schools.com/howto/howto_js_sticky_header.asp)
-- Show latest video, music, shop item and artist name
+- Show latest video, music, shop item and artist name √
 - Background color according to cover artwork, borders are faded √
 
 ## 3. Artists
