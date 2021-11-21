@@ -2,15 +2,31 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@components/*": ["components/*"],
-      "@utils/*": ["components/utils/*"],
-      "@data/*": ["data/*"],
-      "@images/*": ["public/images/*"],
-      "@videos/*": ["public/videos/*"],
-      "@styles/*": ["styles/*"],
+      "@components/*": [
+        "components/*"
+      ],
+      "@utils/*": [
+        "components/utils/*"
+      ],
+      "@data/*": [
+        "data/*"
+      ],
+      "@images/*": [
+        "public/images/*"
+      ],
+      "@videos/*": [
+        "public/videos/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ]
     },
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,8 +37,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/ArtistsOverview"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/ArtistsOverview"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
