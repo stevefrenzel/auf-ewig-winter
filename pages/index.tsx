@@ -1,14 +1,11 @@
 import dynamic from 'next/dynamic';
 
-// import Navigation from '@components/Navigation';
-// import Intro from '@components/Intro';
-// import Spotlight from '@components/Spotlight';
 const Navigation = dynamic(() => import('@components/Navigation'));
 const Intro = dynamic(() => import('@components/Intro'));
 const Spotlight = dynamic(() => import('@components/Spotlight'));
 const ArtistsOverview = dynamic(() => import('@components/ArtistsOverview'));
 const Shop = dynamic(() => import('@components/Shop'));
-const Podcast = dynamic(() => import('@components/Podcast'));
+// const Podcast = dynamic(() => import('@components/Podcast'));
 // const Newsletter = dynamic(() => import('@components/Newsletter'));
 const Footer = dynamic(() => import('@components/Footer'));
 
@@ -21,7 +18,7 @@ const Home = () => {
         <Spotlight />
         <ArtistsOverview />
         <Shop />
-        <Podcast />
+        {/* <Podcast /> */}
         {/* <Newsletter /> */}
         <Footer />
       </main>
