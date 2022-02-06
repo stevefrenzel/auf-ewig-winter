@@ -11,9 +11,9 @@ const Navigation = () => {
         <li>
           <a href="#shop-container">Shop</a>
         </li>
-        <li>
+        {/* <li>
           <a href="#podcast-container">Podcast</a>
-        </li>
+        </li> */}
         {/* <li>
           <a href="#legal-notice">Legal notice</a>
         </li> */}
